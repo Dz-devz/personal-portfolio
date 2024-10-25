@@ -1,20 +1,18 @@
-import { createFileRoute } from '@tanstack/react-router';
+import javascript from "@/assets/javascript.png";
+import nextjs from "@/assets/nextjs.png";
+import pokemon from "@/assets/pokemon.png";
+import pokemonthumbnail from "@/assets/pokemonthumbnail.png";
+import prisma from "@/assets/prisma.png";
+import blogthumbnail from "@/assets/thumbnail.png";
+import typescript from "@/assets/typescript.png";
+import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/components/ui/tooltip"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
-import blogthumbnail from "@/assets/thumbnail.png"
-import pokemonthumbnail from "@/assets/pokemonthumbnail.png"
+} from "@/components/ui/tooltip";
+import { createFileRoute } from "@tanstack/react-router";
 
 const thumbnails = [
   {
@@ -22,14 +20,26 @@ const thumbnails = [
     title: "Full Stack App",
     desc: "DevThoughts",
     thumbnail: blogthumbnail,
+    tools: {
+      javascript: javascript,
+      typescript: typescript,
+      nextjs: nextjs,
+      prisma: prisma,
+    },
   },
   {
     id: 2,
-    title: "API App",
+    title: "Pokemon API App",
     desc: "Pokemon Dex",
     thumbnail: pokemonthumbnail,
-  }
-]
+    tools: {
+      javascript: javascript,
+      typescript: typescript,
+      nextjs: nextjs,
+      pokemon: pokemon,
+    },
+  },
+];
 
 export const Route = createFileRoute("/projects")({
   component: Projects,
@@ -37,38 +47,51 @@ export const Route = createFileRoute("/projects")({
 
 export default function Projects() {
   return (
-<div className="flex flex-col items-center justify-center">
-      <h1 className="text-2xl mb-4">Projects</h1>
-      <TooltipProvider>
-        {thumbnails.map((thumbnail) => (
     <>
-      <Card className='mb-4'>
-        <Tooltip>
-          <TooltipTrigger>
-            <div className="relative flex" key={thumbnail.id}>
-              <div className='flex flex-col items-center justify-center'>
-                <CardTitle className='text-xl md:text-2xl lg:text-3xl'>{thumbnail.title}</CardTitle>
-                <CardDescription>{thumbnail.desc}</CardDescription>
-              </div>
-              <CardContent className='flex items-center justify-center p-4'>
-                <img
-                src={thumbnail.thumbnail}
-                alt="Thumbnail"
-                className="w-[300px] h-[300px] rounded shadow-lg transition-transform transform group-hover:scale-105" />
-              </CardContent>
-            </div>
-          </TooltipTrigger>
-          <TooltipContent>
-              <img
-                src={thumbnail.thumbnail}
-                alt="Thumbnail"
-                className="w-[750px] h-[450px] rounded shadow-lg transition-transform transform group-hover:scale-105" />
-            </TooltipContent>
-        </Tooltip>
-      </Card>
+      <h1 className="text-2xl text-center mb-4 font-chivo">Projects</h1>
+      <div className="mx-auto max-w-screen-xl px-4 py-24 lg:px-12 flex gap-4">
+        <TooltipProvider>
+          {thumbnails.map((thumbnail) => (
+            <>
+              <Card className="mb-4 w-96 h-40 flex items-center justify-center">
+                <Tooltip>
+                  <TooltipTrigger>
+                    <div className="relative font-chivo" key={thumbnail.id}>
+                      <div className="flex flex-col">
+                        <CardTitle className="text-xl md:text-2xl lg:text-3xl ">
+                          {thumbnail.title}
+                        </CardTitle>
+                        <CardDescription className="text-muted-foreground text-sm md:text-base lg:text-lg">
+                          {thumbnail.desc}
+                        </CardDescription>
+                        <div className="flex gap-2">
+                          {Object.entries(thumbnail.tools).map(
+                            ([toolName, toolIcon]) => (
+                              <img
+                                key={toolName}
+                                src={toolIcon}
+                                alt={`${toolName} icon`}
+                                className="w-6 h-6"
+                              />
+                            )
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <img
+                      src={thumbnail.thumbnail}
+                      alt="Thumbnail"
+                      className="w-[750px] h-[450px] rounded shadow-lg transition-transform transform group-hover:scale-105"
+                    />
+                  </TooltipContent>
+                </Tooltip>
+              </Card>
+            </>
+          ))}
+        </TooltipProvider>
+      </div>
     </>
-      ))}
-      </TooltipProvider>
-  </div>
   );
 }

@@ -1,13 +1,11 @@
 import { createFileRoute } from '@tanstack/react-router';
 import { motion } from 'framer-motion';
-import React, { useEffect, useState } from 'react';
-import BentoLayout from '../components/bento';
+import { useEffect, useState } from 'react';
+import Home from '../components/home';
 
 export const Route = createFileRoute('/')({
   component: Index,
 });
-
-const water = '/sounds/water.mp3';
 
 const waveVariants = {
   wave: {
@@ -86,13 +84,14 @@ function Index() {
 
   return (
     <>
-      <div className='bg-[#FDFDFD]'>
+      <div className='bg-[#ECE8E1]'>
         {isBentoShow &&
         <motion.div
           initial="hidden"
           animate="visible"
           variants={pageVariants}>
-          <BentoLayout />
+          {/* <BentoLayout /> */}
+          <Home/>
         </motion.div>
         }
         {isNotVisible &&
@@ -109,43 +108,43 @@ function Index() {
             {isVisibleWave && (
               <>
                 <motion.div
-                  className="absolute mb-64 rounded-full shadow-inner-custom-two w-[50rem] h-[50rem] border-26 border-white"
+                  className="absolute mb-64 rounded-full shadow-inner-custom-two w-[50rem] h-[50rem] border-26 border-[#ECE8E1]"
                   initial="hidden"
                   animate="drop"
                   variants={waterDropVariants}
                 />
                 <motion.div
-                  className="absolute mb-64 rounded-full shadow-inner-custom-two w-[42rem] h-[42rem] border-26 border-white"
+                  className="absolute mb-64 rounded-full shadow-inner-custom-two w-[42rem] h-[42rem] border-26 border-[#ECE8E1]"
                   initial="hidden"
                   animate="drop"
                   variants={waterDropVariants}
                 />
                 <motion.div
-                  className="absolute mb-64 rounded-full shadow-inner-custom-two w-[35rem] h-[35rem] border-26 border-white"
+                  className="absolute mb-64 rounded-full shadow-inner-custom-two w-[35rem] h-[35rem] border-26 border-[#ECE8E1]"
                   initial="hidden"
                   animate="drop"
                   variants={waterDropVariants}
                 />
                 <motion.div
-                  className="absolute mb-60 rounded-full shadow-inner-custom-two w-[26rem] h-[26rem] border-26 border-white"
+                  className="absolute mb-60 rounded-full shadow-inner-custom-two w-[26rem] h-[26rem] border-26 border-[#ECE8E1]"
                   initial="hidden"
                   animate="drop"
                   variants={waterDropVariants}
                 />
                 <motion.div
-                  className="absolute mb-60 rounded-full shadow-inner-custom-two w-[18rem] h-[18rem] border-26 border-white"
+                  className="absolute mb-60 rounded-full shadow-inner-custom-two w-[18rem] h-[18rem] border-26 border-[#ECE8E1]"
                   initial="hidden"
                   animate="drop"
                   variants={waterDropVariants}
                 />
                 <motion.div
-                  className="absolute mb-60 rounded-full shadow-inner-custom-two w-[10rem] h-[10rem] border-26 border-white"
+                  className="absolute mb-60 rounded-full shadow-inner-custom-two w-[10rem] h-[10rem] border-26 border-[#ECE8E1]"
                   initial="hidden"
                   animate="drop"
                   variants={waterDropVariants}
                 />
                 <motion.div 
-                  className="transition-opacity duration-2000 ease-in-out absolute mb-60 rounded-r-[30%] rounded-t-[80%] rounded-l-[80%] shadow-inner-custom-two w-[2rem] h-[2rem] border-2 border-white"
+                  className="transition-opacity duration-2000 ease-in-out absolute mb-60 rounded-r-[30%] rounded-t-[80%] rounded-l-[80%] shadow-inner-custom-two w-[2rem] h-[2rem] border-2 border-[#ECE8E1]"
                   initial="hidden"
                   animate="drop"
                   variants={waterDropVariants}

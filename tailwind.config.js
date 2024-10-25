@@ -21,7 +21,8 @@ export default {
   			poppins: ['Poppins', 'sans-serif']
   		},
   		animation: {
-  			blink: 'blink 1.8s infinite'
+  			blink: 'blink 1.8s infinite',
+  			'border-beam': 'border-beam calc(var(--duration)*1s) infinite linear'
   		},
   		keyframes: {
   			blink: {
@@ -30,6 +31,11 @@ export default {
   				},
   				'50%': {
   					opacity: '0'
+  				}
+  			},
+  			'border-beam': {
+  				'100%': {
+  					'offset-distance': '100%'
   				}
   			}
   		},

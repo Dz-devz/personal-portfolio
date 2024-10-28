@@ -24,21 +24,25 @@ const AboutLazyImport = createFileRoute('/about')()
 // Create/Update Routes
 
 const AboutLazyRoute = AboutLazyImport.update({
+  id: '/about',
   path: '/about',
   getParentRoute: () => rootRoute,
 } as any).lazy(() => import('./routes/about.lazy').then((d) => d.Route))
 
 const ProjectsRoute = ProjectsImport.update({
+  id: '/projects',
   path: '/projects',
   getParentRoute: () => rootRoute,
 } as any)
 
 const ContactRoute = ContactImport.update({
+  id: '/contact',
   path: '/contact',
   getParentRoute: () => rootRoute,
 } as any)
 
 const IndexRoute = IndexImport.update({
+  id: '/',
   path: '/',
   getParentRoute: () => rootRoute,
 } as any)

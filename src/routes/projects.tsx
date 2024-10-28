@@ -13,7 +13,8 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { createFileRoute } from "@tanstack/react-router";
+import BlurFade from "@/components/ui/blur-fade";
+import { createFileRoute, Link } from "@tanstack/react-router";
 
 const thumbnails = [
   {
@@ -21,6 +22,7 @@ const thumbnails = [
     title: "Full Stack App",
     desc: "DevThoughts",
     thumbnail: blogthumbnail,
+    link: "https://devthoughtsnote.vercel.app/",
     tools: {
       javascript: javascript,
       typescript: typescript,
@@ -33,6 +35,7 @@ const thumbnails = [
     title: "Pokemon API App",
     desc: "Pokemon Dex",
     thumbnail: pokemonthumbnail,
+    link: "https://nostalgic-pokedex.vercel.app/",
     tools: {
       javascript: javascript,
       typescript: typescript,
@@ -49,22 +52,25 @@ export const Route = createFileRoute("/projects")({
 export default function Projects() {
   return (
     <>
+    <BlurFade delay={0.25} inView>
       <h1 className="text-2xl text-center mb-4 font-chivo">Projects</h1>
+    </BlurFade>
       <div className="mx-auto max-w-screen-xl px-4 py-24 lg:px-12 flex gap-4">
-        <TooltipProvider>
-          {thumbnails.map((thumbnail) => (
-            <>
-              <Card className="relative mb-4 w-96 h-40 flex items-center justify-center">
-                <BorderBeam
-                  size={200}
-                  duration={12 * thumbnail.id}
-                  delay={9 * thumbnail.id}
-                  colorFrom="#000000"
-                  colorTo="#57AD5B"
-                />
-                <Tooltip>
-                  <TooltipTrigger>
-                    <div className="relative font-chivo" key={thumbnail.id}>
+        {thumbnails.map((thumbnail, idx) => (
+      <BlurFade key={thumbnail.id} delay={0.50 + idx * 0.5} inView>
+          <TooltipProvider>
+            <Card className="relative mb-4 w-96 h-40 flex items-center justify-center">
+              <BorderBeam
+                size={200}
+                duration={12 * thumbnail.id}
+                delay={9 * thumbnail.id}
+                colorFrom="#000000"
+                colorTo="#57AD5B"
+              />
+              <Tooltip>
+                <TooltipTrigger>
+                <Link to={thumbnail.link} target="_blank" rel="noopener noreferrer">
+                  <div className="relative font-chivo">
                       <div className="flex flex-col">
                         <CardTitle className="text-xl md:text-2xl lg:text-3xl text-[#57AD5B]">
                           {thumbnail.title}
@@ -80,25 +86,26 @@ export default function Projects() {
                                 src={toolIcon}
                                 alt={`${toolName} icon`}
                                 className="w-6 h-6"
-                              />
-                            )
-                          )}
+                                />
+                              )
+                            )}
                         </div>
                       </div>
-                    </div>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <img
-                      src={thumbnail.thumbnail}
-                      alt="Thumbnail"
-                      className="w-[750px] h-[450px] rounded shadow-lg transition-transform transform group-hover:scale-105"
-                    />
-                  </TooltipContent>
-                </Tooltip>
-              </Card>
-            </>
-          ))}
-        </TooltipProvider>
+                  </div>
+                </Link>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <img
+                    src={thumbnail.thumbnail}
+                    alt="Thumbnail"
+                    className="w-[500px] h-[350px] rounded shadow-lg transition-transform transform group-hover:scale-105"
+                  />
+                </TooltipContent>
+              </Tooltip>
+            </Card>
+          </TooltipProvider>
+        </BlurFade>
+        ))}
       </div>
     </>
   );

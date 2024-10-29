@@ -53,11 +53,17 @@ export default function Projects() {
   return (
     <>
     <BlurFade delay={0.25} inView>
-      <h1 className="text-2xl text-center mb-4 font-chivo">Projects</h1>
+      <div className="text-2xl text-center font-chivo mb-2 font-bold">Apps I’ve Crafted</div>
     </BlurFade>
-      <div className="mx-auto max-w-screen-xl px-4 py-24 lg:px-12 flex gap-4">
+    <BlurFade delay={0.50} inView>
+      <div className="text-2xl text-center font-chivo text-[#57AD5B] mb-2">Projects</div>
+    </BlurFade>
+    <BlurFade delay={0.75} inView>
+      <h1 className="text-2xl text-center font-chivo mt-2 w-[800px] mr-auto ml-auto">Take a look at some of my recent projects—practical <br/> solutions built to refine my skills and bring useful features to life.</h1>
+    </BlurFade>
+      <div className="mx-auto max-w-screen-xl px-4 py-8 lg:px-12 flex gap-4">
         {thumbnails.map((thumbnail, idx) => (
-      <BlurFade key={thumbnail.id} delay={0.50 + idx * 0.5} inView>
+      <BlurFade key={thumbnail.id} delay={1 + idx * 0.5} inView>
           <TooltipProvider>
             <Card className="relative mb-4 w-96 h-40 flex items-center justify-center">
               <BorderBeam

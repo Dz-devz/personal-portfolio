@@ -7,18 +7,6 @@ export const Route = createFileRoute('/')({
   component: Index,
 });
 
-const waveVariants = {
-  wave: {
-    opacity: [0, 1, 0.5, 1, 0],
-    scale: [1, 1.1, 1, 1.05, 1],
-    transition: {
-      duration: 4,
-      ease: "easeInOut",
-      repeat: Infinity,
-    }
-  }
-};
-
 const waterDropVariants = {
   drop: {
     scale: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
@@ -29,16 +17,6 @@ const waterDropVariants = {
       repeat: 0,
     }
   }
-};
-
-const textVariants = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { duration: 1 } },
-};
-
-const pageVariants = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { delay: 11, duration: 1 } },
 };
 
 function Index() {

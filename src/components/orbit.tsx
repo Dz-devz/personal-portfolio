@@ -34,14 +34,14 @@ export default function OrbitingIcons() {
   };
 
   const icon ={
-      light: {
+        light: {
           hidden: {
               pathLength: 0,
-            fill: "rgba(255, 255, 255, 0)"
+            fill: "rgba(0, 0, 0, 0) "
         },
         visible: {
             pathLength: 1,
-            fill: "rgba(255, 255, 255, 1)"
+            fill: "rgba(0, 0, 0, 1) "
         }
     },
     dark: {
@@ -67,17 +67,19 @@ export default function OrbitingIcons() {
   };
 
   const { theme } = useTheme();
-  const [color, setColor] = useState("#000000");
+  const [color, setColor] = useState("#ffffff");
 
   useEffect(() => {
-    setColor(theme === "dark" ? "#000000" : "#ffffff");
+    setColor(theme === "dark" ? "#ffffff" : "#000000");
   }, [theme]);
 
   return (
     <>
-    <div className='bg-black text-white text-4xl font-chivo flex items-center justify-center pt-10'>Contact me</div>
-    <div className="relative flex items-center justify-center h-screen font-chivo bg-black">
-    <div className="relative z-10 flex flex-col items-center justify-center">
+    <div className='bg-[#ECE8E1] text-black text-4xl font-chivo flex items-center justify-center pt-10'>
+      Contact me
+    </div>
+    <div className="relative flex items-center justify-center h-screen font-chivo bg-[#ECE8E1]">
+    <div className="relative flex flex-col items-center justify-center">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="122" 
@@ -120,7 +122,7 @@ export default function OrbitingIcons() {
                 animate="visible"
                 variants={fadeInVariants(2)}
                 >
-        <h1 className="text-white font-bold text-[5rem]">dz.dev</h1>
+        <h1 className="text-black font-bold text-[5rem] font-chivo">dz.dev</h1>
     </motion.div>
     </div>
 
@@ -140,17 +142,17 @@ export default function OrbitingIcons() {
                 transform: `translate(${x}px, ${y}px)`,
               }}
               initial="hidden"
-                animate="visible"
-                variants={fadeInVariants(0.5 + index * 0.1)}
-                >
+              animate="visible"
+              variants={fadeInVariants(0.5 + index * 0.1)}
+            >
               <motion.div
-                whileHover={{ scale: 1.2,  }}
-                className="text-white text-5xl"
+                whileHover={{ scale: 1.2 }}
+                className="text-black text-5xl"
               >
                 {item.icon}
                 <motion.div
-                  className="absolute inset-0 rounded-full border-2 border-white opacity-0" // Circle effect
-                  style={{ 
+                  className="absolute inset-0 rounded-full border-2 border-black opacity-0"
+                  style={{
                     width: '70px',
                     height: '70px',
                     left: '-10px',
@@ -167,7 +169,7 @@ export default function OrbitingIcons() {
       </motion.div>
       <Particles
         className="absolute inset-0"
-        quantity={300}
+        quantity={500}
         ease={80}
         color={color}
         refresh

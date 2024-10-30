@@ -93,7 +93,7 @@ export default function OrbitingIcons() {
           opportunities, or ideas. Don’t hesitate to reach out!
         </div>
       </BlurFade>
-      <div className="relative flex items-center justify-center h-screen font-chivo bg-[#ECE8E1]">
+      <div className="relative flex items-center justify-center font-chivo bg-[#ECE8E1] h-screen">
         <div className="relative flex flex-col items-center justify-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"

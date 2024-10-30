@@ -1,4 +1,4 @@
-import background from "@/assets/test.jpg";
+import background from "@/assets/profilehome.jpg";
 import TypingAnimation from "./ui/typing-animation";
 
 export default function Home() {

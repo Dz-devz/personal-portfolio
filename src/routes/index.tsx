@@ -74,16 +74,16 @@ function Index() {
             <div
               className={`transition-opacity duration-1000 ease-in-out relative w-full h-full flex flex-col items-center justify-center`}
             >
-              <div className="font-poppins tracking-wider font-semibold z-10 text-center mb-[15rem]">
+              <div className="tracking-wider font-chivo font-semibold z-10 text-center mb-[15rem]">
                 <p
-                  className={`transition-opacity duration-1000 font-chivo ease-in-out text-black font-bold text-[54px] ${
+                  className={`transition-opacity duration-1000 ease-in-out text-black text-[54px] ${
                     isVisible ? "opacity-100" : "opacity-0"
                   }`}
                 >
                   Opportunity knocks only once
                 </p>
                 <p
-                  className={`transition-opacity duration-1000 ease-in-out font-chivo text-black font-bold text-[54px] ${
+                  className={`transition-opacity duration-1000 ease-in-out text-black text-[54px] ${
                     isVisibleTwo ? "opacity-100" : "opacity-0"
                   }`}
                 >

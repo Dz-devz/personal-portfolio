@@ -1,7 +1,7 @@
-import { createRootRoute, Link, Outlet } from '@tanstack/react-router';
 import logo from "@/assets/dzlogo.png";
-import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import { createRootRoute, Link, Outlet } from "@tanstack/react-router";
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 export const Route = createRootRoute({
   component: Root,
@@ -12,12 +12,12 @@ function Root() {
 
   useEffect(() => {
     // Check local storage to see if the root has already been shown
-    const hasShownRoot = localStorage.getItem('rootShown');
+    const hasShownRoot = localStorage.getItem("rootShown");
 
     if (!hasShownRoot) {
       const timeoutId = setTimeout(() => {
         setRootShow(true);
-        localStorage.setItem('rootShown', 'true'); // Mark it as shown
+        localStorage.setItem("rootShown", "true"); // Mark it as shown
       }, 7000);
 
       return () => clearTimeout(timeoutId);
@@ -33,37 +33,43 @@ function Root() {
 
   return (
     <>
-      <div className='p-4 text-lg flex justify-between bg-[#ECE8E1] font-chivo'>
-        {rootShow && 
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={pageVariants}>
-            <div className='flex items-center justify-center gap-[14px] text-[30px]'>
-              <img src={logo} className='w-[66px] h-[50px]' />
-              <p>dz.dev</p>
-            </div>
-          </motion.div>
-        }    
+      <div className="p-4 text-lg flex flex-col md:flex-row justify-between items-center bg-[#ECE8E1] font-chivo">
         {rootShow && (
           <motion.div
             initial="hidden"
             animate="visible"
-            variants={pageVariants}>
-            <div className='flex gap-[92px] mr-4 mt-4'>
-              <Link to="/" className="[&.active]:font-bold">
-                Home
-              </Link>{' '}
-              <Link to="/about" className="[&.active]:font-bold">
-                About
-              </Link>
-              <Link to="/projects" className="[&.active]:font-bold">
-                Projects
-              </Link>{' '}
-              <Link to="/contact" className="[&.active]:font-bold">
-                Contact
-              </Link>
-            </div>
+            variants={pageVariants}
+            className="flex items-center gap-2 text-2xl mb-4 md:mb-0"
+          >
+            <img src={logo} className="w-16 h-12" alt="Logo" />
+            <p className="hidden md:block">dz.dev</p>{" "}
+          </motion.div>
+        )}
+        {rootShow && (
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={pageVariants}
+            className="flex flex-col md:flex-row gap-4 lg:gap-[98px] md:[50px] mr-4 mt-4"
+          >
+            <Link to="/" className="hover:underline [&.active]:font-bold">
+              Home
+            </Link>
+            <Link to="/about" className="hover:underline [&.active]:font-bold">
+              About
+            </Link>
+            <Link
+              to="/projects"
+              className="hover:underline [&.active]:font-bold"
+            >
+              Projects
+            </Link>
+            <Link
+              to="/contact"
+              className="hover:underline [&.active]:font-bold"
+            >
+              Contact
+            </Link>
           </motion.div>
         )}
       </div>

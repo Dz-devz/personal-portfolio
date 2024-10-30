@@ -30,22 +30,22 @@ function Index() {
     const timeoutId = setTimeout(() => {
       setIsVisible(true);
     }, 1000);
-    const timeoutId1 = setTimeout(() => {
+    setTimeout(() => {
       setIsVisible(false);
     }, 2000);
-    const timeoutId2 = setTimeout(() => {
+    setTimeout(() => {
       setIsVisibleTwo(true);
     }, 3000);
-    const timeoutId3 = setTimeout(() => {
+    setTimeout(() => {
       setIsVisibleTwo(false);
     }, 5000);
-    const timeoutId4 = setTimeout(() => {
+    setTimeout(() => {
       setIsVisibleWave(true);
     }, 6000);
     setTimeout(() => {
       setNotVisible(false);
     }, 7000);
-    const timeoutId5 = setTimeout(() => {
+    setTimeout(() => {
       setBentoShow(true);
     }, 7000);
 

@@ -1,4 +1,5 @@
 import background from "@/assets/test.jpg";
+import TypingAnimation from "./ui/typing-animation";
 
 export default function Home() {
   return (
@@ -12,6 +13,17 @@ export default function Home() {
             src={background}
             className="w-[1000px] h-[800px] rounded-xl border-4 border-[#ECE8E1] shadow-lg transform rotate-3"
           />
+          <div className="absolute bottom-20 right-6 text-center left-10">
+            <p className="font-chivo text-white font-semibold">
+              <TypingAnimation
+                className="text-4xl"
+                text="I'm dz.dev Discover projects, skills, and new ideas as I share my
+              journey as a passionate Full Stack Developer. Let's build
+              something amazing together!"
+                duration={40}
+              />
+            </p>
+          </div>
         </div>
       </div>
     </>

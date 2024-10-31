@@ -60,15 +60,33 @@ function Root() {
           aria-label="Toggle menu"
         >
           <div className="flex gap-[4px] flex-col">
-            <div
-              className={`w-6 h-0.5 mb-1 bg-black transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""}`}
-            ></div>
-            <div
-              className={`w-6 h-0.5 bg-black transition-all duration-300 ${menuOpen ? "opacity-0" : "mb-1"}`}
-            ></div>
-            <div
-              className={`w-6 h-0.5 bg-black transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`}
-            ></div>
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={pageVariants}
+            >
+              <div
+                className={`w-6 h-0.5 mb-1 bg-black transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""}`}
+              ></div>
+            </motion.div>
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={pageVariants}
+            >
+              <div
+                className={`w-6 h-0.5 bg-black transition-all duration-300 ${menuOpen ? "opacity-0" : "mb-1"}`}
+              ></div>
+            </motion.div>
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={pageVariants}
+            >
+              <div
+                className={`w-6 h-0.5 bg-black transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`}
+              ></div>
+            </motion.div>
           </div>
         </button>
         {rootShow && (

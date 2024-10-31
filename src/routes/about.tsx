@@ -96,7 +96,7 @@ export function About() {
           className="mx-auto cursor-pointer"
         >
           <BlurFade delay={2} inView>
-            <Card className="max-w-[500px] mt-10 w-full h-auto  border-[1px] bg-[#ECE8E1] border-black mb-20 overflow-hidden">
+            <Card className="max-w-[350px] sm:max-w-[600px] mt-10 w-full h-auto  border-[1px] bg-[#ECE8E1] border-black mb-20 overflow-hidden">
               <CardHeader className="font-chivo text-center">
                 <CardTitle className="leading-2">
                   Master Your Emotions <br /> Author:
@@ -124,7 +124,7 @@ export function About() {
           className="mx-auto cursor-pointer"
         >
           <BlurFade delay={2} inView>
-            <Card className="max-w-[500px] mt-10 w-full h-auto mx-auto border-[1px] bg-[#ECE8E1] border-black mb-20 overflow-hidden">
+            <Card className="max-w-[350px] sm:max-w-[600px] mt-10 w-full h-auto border-[1px] bg-[#ECE8E1] border-black mb-20 overflow-hidden">
               <CardHeader className="font-chivo text-center">
                 <CardTitle className="leading-2">
                   Atomic Habits <br /> Author:

@@ -76,7 +76,7 @@ export function About() {
         </motion.div>
       </div>
       <BlurFade delay={1} inView>
-        <div className="w-[500px] mx-auto mt-14">
+        <div className="w-full max-w-[500px] mx-auto mt-14">
           <Card className="bg-[#ECE8E1]">
             <CardHeader className="font-chivo text-center">
               <CardTitle className="text-2xl">My Book Journey</CardTitle>
@@ -88,7 +88,7 @@ export function About() {
           </Card>
         </div>
       </BlurFade>
-      <div className="flex flex-row items-center justify-center">
+      <div className="flex flex-col md:flex-row items-center justify-center">
         <a
           href="https://devthoughtsnote.vercel.app/posts/6"
           target="_blank"
@@ -106,11 +106,11 @@ export function About() {
                   Discover and comprehend your emotions through this insightful
                   book, allowing for deeper reflection and personal growth.
                 </CardDescription>
-                <CardContent className="flex flex-row items-center justify-center space-x-2">
+                <CardContent className="flex flex-col items-center justify-center space-x-2">
                   <img
                     src={masteryouremotion}
                     alt="Master Your Emotion by: Thibaut Meurisse"
-                    className="max-w-[500px] h-auto"
+                    className="max-w-full h-auto"
                   />
                 </CardContent>
               </CardHeader>
@@ -134,7 +134,7 @@ export function About() {
                   Uncover how small, consistent habits can transform your life
                   through proven systems and strategies.
                 </CardDescription>
-                <CardContent className="flex flex-row items-center justify-center space-x-2">
+                <CardContent className="flex flex-col items-center justify-center space-x-2">
                   <img
                     src={atomichabits}
                     alt="Atomic Habits by: James Clear"

@@ -53,12 +53,12 @@ export default function Projects() {
   return (
     <>
       <BlurFade delay={0.25} inView>
-        <div className="text-2xl text-center font-chivo text-[#57AD5B] mb-2">
+        <div className="text-2xl text-center font-chivo mb-2 font-bold">
           Projects
         </div>
       </BlurFade>
       <BlurFade delay={0.5} inView>
-        <div className="text-4xl text-center font-chivo mb-2 font-bold">
+        <div className="text-4xl text-center font-chivo mb-2 font-bold text-[#57AD5B]">
           Apps I’ve Crafted
         </div>
       </BlurFade>

@@ -2,14 +2,7 @@ import Particles from "@/components/ui/particles";
 import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import {
-  FaDiscord,
-  FaEnvelope,
-  FaGithub,
-  FaGlobe,
-  FaLinkedin,
-  FaPhone,
-} from "react-icons/fa";
+import { FaEnvelope, FaGithub, FaGlobe, FaLinkedin } from "react-icons/fa";
 import BlurFade from "./ui/blur-fade";
 
 export default function OrbitingIcons() {
@@ -22,12 +15,14 @@ export default function OrbitingIcons() {
   });
 
   const icons = [
-    { icon: <FaGithub />, key: "github" },
-    { icon: <FaLinkedin />, key: "linkedin" },
-    { icon: <FaEnvelope />, key: "email" },
-    { icon: <FaDiscord />, key: "discord" },
-    { icon: <FaGlobe />, key: "globe" },
-    { icon: <FaPhone />, key: "phone" },
+    { icon: <FaGithub />, key: "github", link: "https://github.com/Dz-devz" },
+    {
+      icon: <FaLinkedin />,
+      key: "linkedin",
+      link: "https://www.linkedin.com/in/darwinbjordan/",
+    },
+    { icon: <FaEnvelope />, key: "email", link: "darwinbjordan@gmail.com" },
+    { icon: <FaGlobe />, key: "globe", link: "" },
   ];
 
   const orbitVariants = {
@@ -64,12 +59,40 @@ export default function OrbitingIcons() {
     },
   };
 
-  const radius = 200;
+  const radius = {
+    default: 300,
+    sm: 150,
+    md: 250,
+    lg: 300,
+  };
+
+  const getRadius = () => {
+    if (window.innerWidth < 640) {
+      return radius.sm;
+    } else if (window.innerWidth < 768) {
+      return radius.md;
+    }
+    return radius.default; // Default for larger screens
+  };
+
+  const [currentRadius, setCurrentRadius] = useState(getRadius());
+
+  useEffect(() => {
+    const handleResize = () => {
+      setCurrentRadius(getRadius());
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const iconPosition = (index: number, total: number) => {
+    const currentRadius = getRadius();
     const angle = (index / total) * 2 * Math.PI;
-    const x = radius * Math.cos(angle);
-    const y = radius * Math.sin(angle);
+    const x = currentRadius * Math.cos(angle);
+    const y = currentRadius * Math.sin(angle);
     return { x, y };
   };
 
@@ -83,17 +106,17 @@ export default function OrbitingIcons() {
   return (
     <>
       <BlurFade delay={0.25} inView>
-        <div className="text-2xl text-center font-chivo text-[#57AD5B] mb-2">
+        <div className="text-2xl text-center font-chivo font-bold mb-2">
           Connect with me
         </div>
       </BlurFade>
       <BlurFade delay={0.5} inView>
-        <div className="text-2xl text-center font-chivo mb-2 font-bold">
-          I'm always open to discussing new projects, <br />
-          opportunities, or ideas. Don’t hesitate to reach out!
+        <div className="text-4xl text-center font-chivo font-bold text-[#57AD5B]">
+          I'm always open to discussing collaboration, <br />
+          opportunities, or ideas.
         </div>
       </BlurFade>
-      <div className="relative flex items-center justify-center font-chivo bg-[#ECE8E1] h-screen">
+      <div className="relative flex items-center justify-center font-chivo bg-[#ECE8E1] min-h-screen">
         <div className="relative flex flex-col items-center justify-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -137,7 +160,7 @@ export default function OrbitingIcons() {
             animate="visible"
             variants={fadeInVariants(2)}
           >
-            <h1 className="text-black font-bold text-[5rem] font-chivo">
+            <h1 className="text-black font-bold text-5xl sm:text-6xl lg:text-[5rem] font-chivo">
               dz.dev
             </h1>
           </motion.div>
@@ -146,7 +169,7 @@ export default function OrbitingIcons() {
         <motion.div
           className="absolute rounded-full border border-gray-600 flex items-center justify-center"
           variants={orbitVariants}
-          style={{ width: radius * 2, height: radius * 2 }}
+          style={{ width: currentRadius * 2, height: currentRadius * 2 }}
           animate="animate"
         >
           {icons.map((item, index) => {
@@ -162,24 +185,34 @@ export default function OrbitingIcons() {
                 animate="visible"
                 variants={fadeInVariants(0.5 + index * 0.1)}
               >
-                <motion.div
-                  whileHover={{ scale: 1.2 }}
-                  className="text-black text-5xl"
+                <a
+                  href={
+                    item.link.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)
+                      ? `mailto:${item.link}`
+                      : item.link
+                  }
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  {item.icon}
                   <motion.div
-                    className="absolute inset-0 rounded-full border-2 border-black opacity-0"
-                    style={{
-                      width: "70px",
-                      height: "70px",
-                      left: "-10px",
-                      top: "-10px",
-                      boxShadow: "0 0 20px rgba(100, 200, 100, 0.8)",
-                    }}
-                    whileHover={{ opacity: 1 }}
-                    transition={{ duration: 0.2 }}
-                  />
-                </motion.div>
+                    whileHover={{ scale: 1.2 }}
+                    className="text-black text-4xl sm:text-3xl md:text-2xl lg:text-4xl"
+                  >
+                    {item.icon}
+                    <motion.div
+                      className="absolute inset-0 rounded-full border-2 border-black opacity-0"
+                      style={{
+                        width: "50px",
+                        height: "50px",
+                        left: "-6px",
+                        top: "-8px",
+                        boxShadow: "0 0 20px rgba(100, 200, 100, 0.8)",
+                      }}
+                      whileHover={{ opacity: 1 }}
+                      transition={{ duration: 0.2 }}
+                    />
+                  </motion.div>
+                </a>
               </motion.div>
             );
           })}

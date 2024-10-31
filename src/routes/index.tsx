@@ -70,20 +70,20 @@ function Index() {
           </motion.div>
         )}
         {isNotVisible && (
-          <div className="flex items-center justify-center mt-[15rem]">
+          <div className="flex items-center justify-center md:mt-[15rem] mt-[10rem] px-4">
             <div
               className={`transition-opacity duration-1000 ease-in-out relative w-full h-full flex flex-col items-center justify-center`}
             >
               <div className="tracking-wider font-chivo font-semibold z-10 text-center mb-[15rem]">
                 <p
-                  className={`transition-opacity duration-1000 ease-in-out text-black text-[54px] ${
+                  className={`transition-opacity duration-1000 ease-in-out text-black lg:text-[54px] md:text-[40px] text-xl ${
                     isVisible ? "opacity-100" : "opacity-0"
                   }`}
                 >
                   Opportunity knocks only once
                 </p>
                 <p
-                  className={`transition-opacity duration-1000 ease-in-out text-black text-[54px] ${
+                  className={`transition-opacity duration-1000 ease-in-out text-black text-xl lg:text-[54px] md:text-[40px] ${
                     isVisibleTwo ? "opacity-100" : "opacity-0"
                   }`}
                 >
@@ -93,43 +93,43 @@ function Index() {
               {isVisibleWave && (
                 <>
                   <motion.div
-                    className="absolute mb-64 rounded-full shadow-inner-custom-two w-[50rem] h-[50rem] border-26 border-[#ECE8E1]"
+                    className="absolute mb-32 md:mb-42 rounded-full shadow-inner-custom-two w-[80vw] h-[80vw] md:w-[50rem] md:h-[50rem] border-8 md:border-26 border-[#ECE8E1]"
                     initial="hidden"
                     animate="drop"
                     variants={waterDropVariants}
                   />
                   <motion.div
-                    className="absolute mb-64 rounded-full shadow-inner-custom-two w-[42rem] h-[42rem] border-26 border-[#ECE8E1]"
+                    className="absolute mb-32 md:mb-42 rounded-full shadow-inner-custom-two w-[68vw] h-[68vw] md:w-[42rem] md:h-[42rem] border-8 md:border-26 border-[#ECE8E1]"
                     initial="hidden"
                     animate="drop"
                     variants={waterDropVariants}
                   />
                   <motion.div
-                    className="absolute mb-64 rounded-full shadow-inner-custom-two w-[35rem] h-[35rem] border-26 border-[#ECE8E1]"
+                    className="absolute mb-32 md:mb-42 rounded-full shadow-inner-custom-two w-[56vw] h-[56vw] md:w-[35rem] md:h-[35rem] border-8 md:border-26 border-[#ECE8E1]"
                     initial="hidden"
                     animate="drop"
                     variants={waterDropVariants}
                   />
                   <motion.div
-                    className="absolute mb-60 rounded-full shadow-inner-custom-two w-[26rem] h-[26rem] border-26 border-[#ECE8E1]"
+                    className="absolute mb-28 md:mb-40 rounded-full shadow-inner-custom-two w-[40vw] h-[40vw] md:w-[26rem] md:h-[26rem] border-8 md:border-26 border-[#ECE8E1]"
                     initial="hidden"
                     animate="drop"
                     variants={waterDropVariants}
                   />
                   <motion.div
-                    className="absolute mb-60 rounded-full shadow-inner-custom-two w-[18rem] h-[18rem] border-26 border-[#ECE8E1]"
+                    className="absolute mb-28 md:mb-40 rounded-full shadow-inner-custom-two w-[28vw] h-[28vw] md:w-[18rem] md:h-[18rem] border-8 md:border-26 border-[#ECE8E1]"
                     initial="hidden"
                     animate="drop"
                     variants={waterDropVariants}
                   />
                   <motion.div
-                    className="absolute mb-60 rounded-full shadow-inner-custom-two w-[10rem] h-[10rem] border-26 border-[#ECE8E1]"
+                    className="absolute mb-28 md:mb-40 rounded-full shadow-inner-custom-two w-[15vw] h-[15vw] md:w-[10rem] md:h-[10rem] border-8 md:border-26 border-[#ECE8E1]"
                     initial="hidden"
                     animate="drop"
                     variants={waterDropVariants}
                   />
                   <motion.div
-                    className="transition-opacity duration-2000 ease-in-out absolute mb-60 rounded-r-[30%] rounded-t-[80%] rounded-l-[80%] shadow-inner-custom-two w-[2rem] h-[2rem] border-2 border-[#ECE8E1]"
+                    className="transition-opacity duration-2000 ease-in-out absolute mb-28 md:mb-40 rounded-r-[30%] rounded-t-[80%] rounded-l-[80%] shadow-inner-custom-two w-[5vw] h-[5vw] md:w-[2rem] md:h-[2rem] border-2 border-[#ECE8E1]"
                     initial="hidden"
                     animate="drop"
                     variants={waterDropVariants}

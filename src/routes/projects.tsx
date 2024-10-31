@@ -2,7 +2,10 @@ import javascript from "@/assets/javascript.png";
 import nextjs from "@/assets/nextjs.png";
 import pokemon from "@/assets/pokemon.png";
 import pokemonthumbnail from "@/assets/pokemonthumbnail.png";
+import portfoliothumbnail from "@/assets/portfoliothumbnail.png";
 import prisma from "@/assets/prisma.png";
+import reactjs from "@/assets/reactjs.png";
+import tailwind from "@/assets/tailwind.png";
 import blogthumbnail from "@/assets/thumbnail.png";
 import typescript from "@/assets/typescript.png";
 import BlurFade from "@/components/ui/blur-fade";
@@ -28,6 +31,7 @@ const thumbnails = [
       typescript: typescript,
       nextjs: nextjs,
       prisma: prisma,
+      tailwind: tailwind,
     },
   },
   {
@@ -40,7 +44,21 @@ const thumbnails = [
       javascript: javascript,
       typescript: typescript,
       nextjs: nextjs,
+      tailwind: tailwind,
       pokemon: pokemon,
+    },
+  },
+  {
+    id: 3,
+    title: "Dz.dev Portfolio",
+    desc: "Personal Portfolio",
+    thumbnail: portfoliothumbnail,
+    link: "https://dzdev.vercel.app/",
+    tools: {
+      javascript: javascript,
+      typescript: typescript,
+      reactjs: reactjs,
+      tailwind: tailwind,
     },
   },
 ];

@@ -22,7 +22,7 @@ export default function OrbitingIcons() {
       link: "https://www.linkedin.com/in/darwinbjordan/",
     },
     { icon: <FaEnvelope />, key: "email", link: "darwinbjordan@gmail.com" },
-    { icon: <FaGlobe />, key: "globe", link: "" },
+    { icon: <FaGlobe />, key: "globe", link: "https://dzdev.vercel.app/" },
   ];
 
   const orbitVariants = {

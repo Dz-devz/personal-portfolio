@@ -76,21 +76,27 @@ function Root() {
               menuOpen ? "block" : "hidden md:flex"
             }`}
           >
-            <Link to="/" className="hover:underline [&.active]:font-bold">
+            <Link
+              to="/"
+              className="hover:underline text-center [&.active]:font-bold"
+            >
               Home
             </Link>
-            <Link to="/about" className="hover:underline [&.active]:font-bold">
+            <Link
+              to="/about"
+              className="hover:underline text-center [&.active]:font-bold"
+            >
               About
             </Link>
             <Link
               to="/projects"
-              className="hover:underline [&.active]:font-bold"
+              className="hover:underline text-center [&.active]:font-bold"
             >
               Projects
             </Link>
             <Link
               to="/contact"
-              className="hover:underline [&.active]:font-bold"
+              className="hover:underline text-center [&.active]:font-bold"
             >
               Contact
             </Link>

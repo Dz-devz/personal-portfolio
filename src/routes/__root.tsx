@@ -36,6 +36,10 @@ function Root() {
     setMenuOpen((prev) => !prev); // Toggle the menu open state
   };
 
+  const handleLinkClick = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <>
       <div className="p-4 text-lg flex flex-col md:flex-row justify-between items-center bg-[#ECE8E1] font-chivo">
@@ -79,24 +83,28 @@ function Root() {
             <Link
               to="/"
               className="hover:underline text-center [&.active]:font-bold"
+              onClick={handleLinkClick}
             >
               Home
             </Link>
             <Link
               to="/about"
               className="hover:underline text-center [&.active]:font-bold"
+              onClick={handleLinkClick}
             >
               About
             </Link>
             <Link
               to="/projects"
               className="hover:underline text-center [&.active]:font-bold"
+              onClick={handleLinkClick}
             >
               Projects
             </Link>
             <Link
               to="/contact"
               className="hover:underline text-center [&.active]:font-bold"
+              onClick={handleLinkClick}
             >
               Contact
             </Link>

@@ -63,16 +63,16 @@ export default function Projects() {
         </div>
       </BlurFade>
       <BlurFade delay={0.75} inView>
-        <h1 className="text-2xl text-center font-chivo mt-2 w-[800px] mr-auto ml-auto">
+        <h1 className="text-2xl text-center font-chivo mt-2 max-w-3xl mx-auto">
           Take a look at some of my recent projects—practical <br /> solutions
           built to refine my skills and bring useful features to life.
         </h1>
       </BlurFade>
-      <div className="mx-auto max-w-screen-xl px-4 py-8 lg:px-12 flex gap-4">
+      <div className="mx-auto max-w-screen-xl flex-col lg:flex-row flex-wrap px-4 py-8 lg:px-12 flex gap-4">
         {thumbnails.map((thumbnail, idx) => (
           <BlurFade key={thumbnail.id} delay={1 + idx * 0.5} inView>
             <TooltipProvider>
-              <Card className="relative mb-4 w-96 h-40 flex items-center justify-center">
+              <Card className="relative mb-4 p-4 w-96 h-36 flex items-center justify-center">
                 <BorderBeam
                   size={200}
                   duration={12 * thumbnail.id}

@@ -11,12 +11,13 @@ export default function Home() {
 
           <img
             src={background}
-            className="w-[1000px] h-[800px] rounded-xl border-4 border-[#ECE8E1] shadow-lg transform rotate-3"
+            className="w-full max-w-[1000px] h-auto rounded-xl border-4 border-[#ECE8E1] shadow-lg transform rotate-3"
+            alt="Profile background"
           />
-          <div className="absolute bottom-20 right-6 text-center left-10">
+          <div className="absolute md:bottom-20 bottom-2 right-6 text-center left-10">
             <p className="font-chivo text-white font-semibold">
               <TypingAnimation
-                className="text-4xl"
+                className="text-md lg:text-4xl md:text-2xl"
                 text="I'm dz.dev Discover projects, skills, and new ideas as I share my
               journey as a passionate Full Stack Developer. Let's build
               something amazing together!"

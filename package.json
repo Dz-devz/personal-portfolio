@@ -1,6 +1,8 @@
 {
-  "name": "react",
-  "private": true,
+  "name": "dz-dev-website",
+  "repository": "https://github.com/Dz-devz/personal-portfolio",
+  "description": "Personal Portfolio/Website",
+  "author": "Darwin Jordan <darwinbjordan@gmail.com>",
   "version": "0.0.0",
   "type": "module",
   "scripts": {

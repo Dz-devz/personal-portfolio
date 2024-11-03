@@ -73,8 +73,13 @@ export function About() {
           transition={{ duration: 5 }}
           className="absolute text-center text-2xl font-bold max-w-[800px] p-4"
         >
-          <div>
-            <span className="text-[#eb3137]">Mistake Means Progress</span>
+          <div className="mb-10">
+            <span className="text-[#eb3137]">
+              "Mistake Means Progress" — dz.dev,{" "}
+            </span>
+            <div>
+              <span className="text-[#eb3137]">reflecting on the journey.</span>
+            </div>
           </div>
           <span>{fullText}</span>
         </motion.div>

@@ -100,31 +100,35 @@ function Root() {
           >
             <Link
               to="/"
-              className="hover:underline text-center [&.active]:font-bold"
+              className="relative group text-center [&.active]:font-bold"
               onClick={handleLinkClick}
             >
               Home
+              <span className="absolute bottom-1 left-0 w-0 h-[2px] transition-all bg-[#57AD5B] group-hover:w-full"></span>
             </Link>
             <Link
               to="/about"
-              className="hover:underline text-center [&.active]:font-bold"
+              className="relative group text-center [&.active]:font-bold"
               onClick={handleLinkClick}
             >
               About
+              <span className="absolute bottom-1 left-0 w-0 h-[2px] transition-all bg-[#57AD5B] group-hover:w-full"></span>
             </Link>
             <Link
               to="/projects"
-              className="hover:underline text-center [&.active]:font-bold"
+              className="relative group text-center [&.active]:font-bold"
               onClick={handleLinkClick}
             >
               Projects
+              <span className="absolute bottom-1 left-0 w-0 h-[2px] transition-all bg-[#57AD5B] group-hover:w-full"></span>
             </Link>
             <Link
               to="/contact"
-              className="hover:underline text-center [&.active]:font-bold"
+              className="relative group text-center [&.active]:font-bold"
               onClick={handleLinkClick}
             >
               Contact
+              <span className="absolute bottom-1 left-0 w-0 h-[2px] transition-all bg-[#57AD5B] group-hover:w-full"></span>
             </Link>
           </motion.div>
         )}

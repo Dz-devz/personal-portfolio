@@ -1,3 +1,4 @@
+import drizzlekit from "@/assets/drizzlekit.png";
 import javascript from "@/assets/javascript.png";
 import nextjs from "@/assets/nextjs.png";
 import pokemon from "@/assets/pokemon.png";
@@ -23,6 +24,20 @@ const thumbnails = [
   {
     id: 1,
     title: "Full Stack App",
+    desc: "TrackNStock - (Deployment On Going)",
+    thumbnail: "",
+    link: "",
+    tools: {
+      javascript: javascript,
+      typescript: typescript,
+      nextjs: reactjs,
+      prisma: drizzlekit,
+      tailwind: tailwind,
+    },
+  },
+  {
+    id: 2,
+    title: "Full Stack App",
     desc: "DevThoughts",
     thumbnail: blogthumbnail,
     link: "https://devthoughtsnote.vercel.app/",
@@ -35,7 +50,7 @@ const thumbnails = [
     },
   },
   {
-    id: 2,
+    id: 3,
     title: "Pokemon API App",
     desc: "Pokemon Dex",
     thumbnail: pokemonthumbnail,
@@ -49,7 +64,7 @@ const thumbnails = [
     },
   },
   {
-    id: 3,
+    id: 4,
     title: "Dz.dev Portfolio",
     desc: "Personal Portfolio",
     thumbnail: portfoliothumbnail,

@@ -63,6 +63,7 @@ export function About() {
         <div className="text-center text-4xl font-bold font-chivo mt-4 text-[#57AD5B]">
           <span>A Path Through My Domain</span>
         </div>
+        <div className="text-center text-4xl font-bold font-chivo mt-4 "></div>
       </BlurFade>
       <div className="relative flex items-center justify-center font-chivo">
         <IconCloud iconSlugs={slugs} />
@@ -72,6 +73,9 @@ export function About() {
           transition={{ duration: 5 }}
           className="absolute text-center text-2xl font-bold max-w-[800px] p-4"
         >
+          <div>
+            <span className="text-[#eb3137]">Mistake Means Progress</span>
+          </div>
           <span>{fullText}</span>
         </motion.div>
       </div>

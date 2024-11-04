@@ -101,7 +101,7 @@ export default function Projects() {
           built to refine my skills and bring useful features to life.
         </h1>
       </BlurFade>
-      <div className="mx-auto max-w-screen-xl flex-col lg:flex-row flex-wrap px-4 py-8 lg:px-12 flex gap-4">
+      <div className="mx-auto max-w-screen-xl flex-col lg:flex-row flex-wrap px-4 py-8 lg:px-12 xl:justify-normal lg:justify-center flex gap-4">
         {thumbnails.map((thumbnail, idx) => (
           <BlurFade key={thumbnail.id} delay={1 + idx * 0.5} inView>
             <TooltipProvider>

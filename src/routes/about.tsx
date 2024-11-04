@@ -73,15 +73,15 @@ export function About() {
           transition={{ duration: 5 }}
           className="absolute text-center text-2xl font-bold max-w-[800px] p-4"
         >
-          <div className="mb-10">
-            <span className="text-[#eb3137]">
+          <div>
+            <span className="text-primary">
               "Mistake Means Progress" — dz.dev,{" "}
             </span>
             <div>
-              <span className="text-[#eb3137]">reflecting on the journey.</span>
+              <span className="text-primary">reflecting on the journey.</span>
             </div>
           </div>
-          <span>{fullText}</span>
+          {/* <span>{fullText}</span> */}
         </motion.div>
       </div>
       <BlurFade delay={1} inView>

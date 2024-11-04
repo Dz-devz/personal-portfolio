@@ -107,7 +107,7 @@ export default function Projects() {
             <TooltipProvider>
               <Card className="relative mb-4 p-4 w-96 h-36 flex items-center justify-center">
                 <BorderBeam
-                  size={200}
+                  size={100}
                   duration={12 * thumbnail.id}
                   delay={9 * thumbnail.id}
                   colorFrom="#000000"

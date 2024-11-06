@@ -11,7 +11,7 @@ export default function Home() {
 
           <img
             src={background}
-            className="xl:max-w-[900px] lg:max-w-[700px] md:max-w-[600px] sm:max-w-[300px] h-auto rounded-xl border-4 border-[#ECE8E1] shadow-lg transform rotate-3"
+            className="lg:max-w-[700px] md:max-w-[600px] sm:max-w-[300px] h-auto rounded-xl border-4 border-[#ECE8E1] shadow-lg transform rotate-3"
             alt="Profile background"
           />
           <div className="absolute md:bottom-16 bottom-2 right-6 text-center left-10">

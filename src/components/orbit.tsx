@@ -60,10 +60,10 @@ export default function OrbitingIcons() {
   };
 
   const radius = {
-    default: 300,
+    default: 220,
     sm: 150,
-    md: 250,
-    lg: 300,
+    md: 180,
+    lg: 220,
   };
 
   const getRadius = () => {
@@ -72,7 +72,7 @@ export default function OrbitingIcons() {
     } else if (window.innerWidth < 768) {
       return radius.md;
     }
-    return radius.default; // Default for larger screens
+    return radius.default;
   };
 
   const [currentRadius, setCurrentRadius] = useState(getRadius());
@@ -105,6 +105,14 @@ export default function OrbitingIcons() {
 
   return (
     <>
+    <div className="relative min-h-screen w-full overflow-hidden bg-[#ECE8E1]">
+        <Particles
+          className="absolute w-full h-full z-0 inset-0"
+          quantity={500}
+          ease={80}
+          color={color}
+          refresh
+          />
       <BlurFade delay={0.25} inView>
         <div className="text-2xl text-center font-chivo font-bold mb-2">
           Connect with me
@@ -116,7 +124,7 @@ export default function OrbitingIcons() {
           opportunities, or ideas.
         </div>
       </BlurFade>
-      <div className="relative flex items-center justify-center font-chivo bg-[#ECE8E1] min-h-screen">
+<div className="relative flex flex-col items-center justify-center h-full min-h-screen z-10">
         <div className="relative flex flex-col items-center justify-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -145,21 +153,21 @@ export default function OrbitingIcons() {
                 initial="hidden"
                 animate="visible"
                 transition={{ duration: 4.5 }}
-              />
+                />
               <motion.path
                 d="M 712.5,657.5 C 748.168,657.667 783.835,657.5 819.5,657 C 871.5,605 923.5,553 975.5,501 C 833.833,500.333 692.167,500.333 550.5,501 C 604.699,554.034 658.699,605.2 712.5,657.5 Z" // Third path flipped
                 variants={icon.light}
                 initial="hidden"
                 animate="visible"
                 transition={{ duration: 5 }}
-              />
+                />
             </g>
           </svg>
           <motion.div
             initial="hidden"
             animate="visible"
             variants={fadeInVariants(2)}
-          >
+            >
             <h1 className="text-black font-bold text-5xl sm:text-6xl lg:text-[5rem] font-chivo">
               dz.dev
             </h1>
@@ -175,7 +183,7 @@ export default function OrbitingIcons() {
             const { x, y } = iconPosition(index, icons.length);
             return (
               <motion.div
-                key={index}
+              key={index}
                 className="absolute"
                 style={{
                   transform: `translate(${x}px, ${y}px)`,
@@ -192,7 +200,7 @@ export default function OrbitingIcons() {
                   }
                   target="_blank"
                   rel="noopener noreferrer"
-                >
+                  >
                   <motion.div
                     whileHover={{ scale: 1.2 }}
                     className="text-black text-4xl sm:text-3xl md:text-2xl lg:text-4xl"
@@ -217,13 +225,7 @@ export default function OrbitingIcons() {
           })}
         </motion.div>
       </div>
-        <Particles
-          className="absolute inset-0"
-          quantity={500}
-          ease={80}
-          color={color}
-          refresh
-        />
+  </div>
     </>
   );
 }

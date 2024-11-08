@@ -42,7 +42,7 @@ function Root() {
 
   return (
     <>
-      <div className="p-4 text-lg flex flex-col md:flex-row justify-between items-center bg-[#ECE8E1] font-chivo">
+      <div className="p-4 text-lg flex flex-col lg:flex-row justify-between items-center bg-[#ECE8E1] font-chivo">
         {rootShow && (
           <motion.div
             initial="hidden"

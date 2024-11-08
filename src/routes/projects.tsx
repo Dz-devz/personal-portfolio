@@ -23,8 +23,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 const thumbnails = [
   {
     id: 1,
-    title: "Full Stack App",
-    desc: "TrackNStock - (Deployment On Going)",
+    title: "TrackNStock ",
+    desc: "Full Stack App - (Deployment On Going)",
     thumbnail: "",
     link: "",
     tools: {
@@ -37,8 +37,8 @@ const thumbnails = [
   },
   {
     id: 2,
-    title: "Full Stack App",
-    desc: "DevThoughts",
+    title: "DevThoughts",
+    desc: "Full Stack App",
     thumbnail: blogthumbnail,
     link: "https://devthoughtsnote.vercel.app/",
     tools: {
@@ -51,8 +51,8 @@ const thumbnails = [
   },
   {
     id: 3,
-    title: "Pokemon API App",
-    desc: "Pokemon Dex",
+    title: "Pokemon Dex",
+    desc: "Pokemon API App",
     thumbnail: pokemonthumbnail,
     link: "https://nostalgic-pokedex.vercel.app/",
     tools: {

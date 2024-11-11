@@ -42,15 +42,15 @@ export default function Home() {
         <div className="relative mt-10">
           <div className="absolute top-[-12px] left-[-5px] w-20 h-6 bg-[#57AD5B] rotate-[-30deg] shadow-md z-10"></div>
           <div className="absolute bottom-[-8px] right-[-6px] w-20 h-6 bg-[#57AD5B] z-10 rotate-[-60deg] shadow-md"></div>
-          <div className="flex flex-col md:flex-row">
+          <div className="flex flex-col sm:flex-row">
             <img
               src={images[currentImageIndex]}
-              className={`xl:max-h-[700px] lg:max-h-[600px] md:max-h-[400px] max-sm:max-h-[400px] rounded-xl border-4 border-[#ECE8E1] shadow-lg transform rotate-3 transition-opacity duration-500 ${fadeCurrent ? "opacity-100" : "opacity-0"}`}
+              className={`xl:max-h-[700px] lg:max-h-[600px] md:max-h-[450px] sm:max-h-[400px] max-sm:max-h-[400px] rounded-xl border-4 border-[#ECE8E1] shadow-lg transform rotate-3 transition-opacity duration-500 ${fadeCurrent ? "opacity-100" : "opacity-0"}`}
               alt="Profile background"
             />
             <img
               src={images[nextImageIndex]}
-              className={`xl:max-h-[700px] lg:max-h-[600px] md:max-h-[400px] max-sm:hidden rounded-xl border-4 border-[#ECE8E1] shadow-lg transform rotate-3 transition-opacity duration-500 ${fadeNext ? "opacity-100" : "opacity-0"}`}
+              className={`xl:max-h-[700px] lg:max-h-[600px] md:max-h-[450px] sm:max-h-[400px] max-sm:hidden rounded-xl border-4 border-[#ECE8E1] shadow-lg transform rotate-3 transition-opacity duration-500 ${fadeNext ? "opacity-100" : "opacity-0"}`}
               alt="Profile background"
             />
           </div>

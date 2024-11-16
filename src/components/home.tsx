@@ -1,7 +1,7 @@
-import profile from "@/assets/profile.jpg";
-import profile2 from "@/assets/profile2.jpg";
-import profile3 from "@/assets/profile3.jpg";
-import profile4 from "@/assets/profile4.jpg";
+import profile from "@/assets/profile.png";
+import profile2 from "@/assets/profile2.png";
+import profile3 from "@/assets/profile3.png";
+import profile4 from "@/assets/profile4.png";
 
 import { useEffect, useState } from "react";
 import TypingAnimation from "./ui/typing-animation";

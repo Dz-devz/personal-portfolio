@@ -8,6 +8,7 @@ import prisma from "@/assets/prisma.png";
 import reactjs from "@/assets/reactjs.png";
 import tailwind from "@/assets/tailwind.png";
 import blogthumbnail from "@/assets/thumbnail.png";
+import tracknstockthumbnail from "@/assets/tracknstockthumbnail.png";
 import typescript from "@/assets/typescript.png";
 import BlurFade from "@/components/ui/blur-fade";
 import { BorderBeam } from "@/components/ui/border-beam";
@@ -25,8 +26,8 @@ const thumbnails = [
     id: 1,
     title: "TrackNStock ",
     desc: "Full Stack App - (Deployment On Going)",
-    thumbnail: "",
-    link: "",
+    thumbnail: tracknstockthumbnail,
+    link: "https://tracknstock.up.railway.app/",
     tools: {
       javascript: javascript,
       typescript: typescript,

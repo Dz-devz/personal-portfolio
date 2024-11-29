@@ -1,6 +1,8 @@
 import drizzlekit from "@/assets/drizzlekit.png";
+import honojs from "@/assets/honojs.png";
 import javascript from "@/assets/javascript.png";
 import nextjs from "@/assets/nextjs.png";
+import nodejs from "@/assets/nodejs.png";
 import pokemon from "@/assets/pokemon.png";
 import pokemonthumbnail from "@/assets/pokemonthumbnail.png";
 import portfoliothumbnail from "@/assets/portfoliothumbnail.png";
@@ -20,12 +22,13 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { createPortal } from "react-dom";
 
 const thumbnails = [
   {
     id: 1,
     title: "TrackNStock ",
-    desc: "Full Stack App - (Deployment On Going)",
+    desc: "Full Stack App",
     thumbnail: tracknstockthumbnail,
     link: "https://tracknstock.up.railway.app/",
     tools: {
@@ -34,6 +37,8 @@ const thumbnails = [
       nextjs: reactjs,
       prisma: drizzlekit,
       tailwind: tailwind,
+      node: nodejs,
+      hono: honojs,
     },
   },
   {
@@ -145,13 +150,16 @@ export default function Projects() {
                       </div>
                     </Link>
                   </TooltipTrigger>
-                  <TooltipContent>
-                    <img
-                      src={thumbnail.thumbnail}
-                      alt="Thumbnail"
-                      className="w-[500px] h-[350px] rounded shadow-lg transition-transform transform group-hover:scale-105"
-                    />
-                  </TooltipContent>
+                  {createPortal(
+                    <TooltipContent className="z-[9999]">
+                      <img
+                        src={thumbnail.thumbnail}
+                        alt="Thumbnail"
+                        className="w-[500px] h-[350px] rounded shadow-lg"
+                      />
+                    </TooltipContent>,
+                    document.body
+                  )}
                 </Tooltip>
               </Card>
             </TooltipProvider>

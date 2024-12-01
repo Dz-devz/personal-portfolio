@@ -27,7 +27,7 @@ import { createPortal } from "react-dom";
 const thumbnails = [
   {
     id: 1,
-    title: "TrackNStock (Fixing bugs On-Prod In-Progress)",
+    title: "TrackNStock",
     desc: "Full Stack App",
     thumbnail: tracknstockthumbnail,
     link: "https://tracknstock.up.railway.app/",

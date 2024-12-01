@@ -89,7 +89,7 @@ const thumbnails = [
   },
   {
     id: 5,
-    title: "Belle Website",
+    title: "Belle Website (In-progress)",
     desc: "Personal Portfolio",
     thumbnail: bellethumbnail,
     link: "https://belle-website.vercel.app/",

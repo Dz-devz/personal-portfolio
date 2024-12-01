@@ -59,7 +59,7 @@ export default function Home() {
               <TypingAnimation
                 className="text-md lg:text-3xl md:text-lg max-sm:text-sm"
                 text="I'm dz.dev Discover projects, skills, and new ideas as I share my
-              journey as a passionate Full Stack Developer. Let's build
+              journey as a passionate Software Engineer. Let's build
               something amazing together!"
                 duration={40}
               />

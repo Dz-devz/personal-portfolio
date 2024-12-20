@@ -104,7 +104,7 @@ function Root() {
               onClick={handleLinkClick}
             >
               Home
-              <span className="absolute bottom-1 left-0 w-0 h-[2px] transition-all bg-[#57AD5B] group-hover:w-full"></span>
+              <span className="absolute bottom-1 left-0 w-0 h-[2px] transition-all bg-[#57AD5B] group-hover:w-full tablet-hide"></span>
             </Link>
             <Link
               to="/about"
@@ -112,7 +112,7 @@ function Root() {
               onClick={handleLinkClick}
             >
               About
-              <span className="absolute bottom-1 left-0 w-0 h-[2px] transition-all bg-[#57AD5B] group-hover:w-full"></span>
+              <span className="absolute bottom-1 left-0 w-0 h-[2px] transition-all bg-[#57AD5B] group-hover:w-full tablet-hide"></span>
             </Link>
             <Link
               to="/projects"
@@ -120,7 +120,7 @@ function Root() {
               onClick={handleLinkClick}
             >
               Projects
-              <span className="absolute bottom-1 left-0 w-0 h-[2px] transition-all bg-[#57AD5B] group-hover:w-full"></span>
+              <span className="absolute bottom-1 left-0 w-0 h-[2px] transition-all bg-[#57AD5B] group-hover:w-full tablet-hide"></span>
             </Link>
             <Link
               to="/contact"
@@ -128,7 +128,7 @@ function Root() {
               onClick={handleLinkClick}
             >
               Contact
-              <span className="absolute bottom-1 left-0 w-0 h-[2px] transition-all bg-[#57AD5B] group-hover:w-full"></span>
+              <span className="absolute bottom-1 left-0 w-0 h-[2px] transition-all bg-[#57AD5B] group-hover:w-full tablet-hide"></span>
             </Link>
           </motion.div>
         )}

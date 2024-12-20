@@ -5,7 +5,7 @@ export default {
   theme: {
     extend: {
       screens: {
-        laptop: "1024px", // Match your Asus screen width
+        laptop: "1224px", // Match your Asus screen width
       },
       boxShadow: {
         "inner-custom": "inset 6px 6px 13px rgba(236, 232, 225, 1)",

@@ -26,6 +26,7 @@ import {
 } from "@/components/ui/tooltip";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { createPortal } from "react-dom";
+import { FaGithub, FaLink } from "react-icons/fa";
 
 const thumbnails = [
   {
@@ -34,6 +35,7 @@ const thumbnails = [
     desc: "Full Stack App",
     thumbnail: tracknstockthumbnail,
     link: "https://tracknstock.up.railway.app/",
+    github: "https://github.com/Dz-devz/liabilities-inventory-app.git",
     tools: {
       javascript: javascript,
       typescript: typescript,
@@ -51,6 +53,7 @@ const thumbnails = [
     desc: "Full Stack App",
     thumbnail: blogthumbnail,
     link: "https://devthoughtsnote.vercel.app/",
+    github: "https://github.com/Dz-devz/dzdev-thoughts.git",
     tools: {
       javascript: javascript,
       typescript: typescript,
@@ -66,6 +69,7 @@ const thumbnails = [
     desc: "Pokemon API App",
     thumbnail: pokemonthumbnail,
     link: "https://nostalgic-pokedex.vercel.app/",
+    github: "",
     tools: {
       javascript: javascript,
       typescript: typescript,
@@ -81,6 +85,7 @@ const thumbnails = [
     desc: "Personal Portfolio",
     thumbnail: portfoliothumbnail,
     link: "https://dzdev.vercel.app/",
+    github: "https://github.com/Dz-devz/personal-portfolio.git",
     tools: {
       javascript: javascript,
       typescript: typescript,
@@ -95,6 +100,7 @@ const thumbnails = [
     desc: "Full Stack App",
     thumbnail: invoiceprothumbnail,
     link: "",
+    github: "https://github.com/Dz-devz/invoice-print.git",
     tools: {
       javascript: javascript,
       typescript: typescript,
@@ -170,6 +176,21 @@ export default function Projects() {
                             <CardTitle className="text-xl md:text-2xl lg:text-3xl text-[#57AD5B]">
                               {thumbnail.title}
                             </CardTitle>
+                            <div className="flex flex-row gap-2">
+                              <Link
+                                to={thumbnail.github}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                <FaGithub />
+                              </Link>
+                              <Link
+                                to={thumbnail.link}
+                                rel="noopener noreferrer"
+                              >
+                                <FaLink />
+                              </Link>
+                            </div>
                             <CardDescription className="text-muted-foreground text-sm md:text-base lg:text-lg">
                               {thumbnail.desc}
                             </CardDescription>

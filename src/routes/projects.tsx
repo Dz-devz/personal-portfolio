@@ -1,6 +1,8 @@
 import bellethumbnail from "@/assets/bellethumbnail.png";
 import drizzlekit from "@/assets/drizzlekit.png";
+import express from "@/assets/express.png";
 import honojs from "@/assets/honojs.png";
+import invoiceprothumbnail from "@/assets/invoiceprothumbnail.png";
 import javascript from "@/assets/javascript.png";
 import nextjs from "@/assets/nextjs.png";
 import nodejs from "@/assets/nodejs.png";
@@ -84,6 +86,22 @@ const thumbnails = [
       typescript: typescript,
       reactjs: reactjs,
       tailwind: tailwind,
+    },
+    category: "Personal",
+  },
+  {
+    id: 4,
+    title: "Invoice Pro",
+    desc: "Full Stack App",
+    thumbnail: invoiceprothumbnail,
+    link: "",
+    tools: {
+      javascript: javascript,
+      typescript: typescript,
+      tailwind: tailwind,
+      prisma: prisma,
+      node: nodejs,
+      express: express,
     },
     category: "Personal",
   },

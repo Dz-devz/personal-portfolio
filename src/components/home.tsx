@@ -47,7 +47,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row">
             <img
               src={images[currentImageIndex]}
-              className={`bigger:max-h-[800px] laptop:max-h-[500px] xl:max-h-[700px] lg:max-h-[550px] md:max-h-[450px] sm:max-h-[400px] max-sm:max-h-[400px] rounded-xl border-4 border-[#ECE8E1] shadow-lg transform rotate-3 transition-opacity duration-500${fadeCurrent ? "opacity-100" : "opacity-0"}`}
+              className={`bigger:max-h-[800px] laptop:max-h-[500px] xl:max-h-[700px] lg:max-h-[550px] md:max-h-[450px] sm:max-h-[400px] max-sm:max-h-[400px] rounded-xl border-4 border-[#ECE8E1] shadow-lg transform rotate-3 transition-opacity duration-500 ${fadeCurrent ? "opacity-100" : "opacity-0"}`}
               alt="Profile background"
             />
             <img

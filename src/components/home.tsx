@@ -3,7 +3,9 @@ import profile2 from "@/assets/profile2.jpg";
 import profile3 from "@/assets/profile3.jpg";
 import profile4 from "@/assets/profile4.jpg";
 
+import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import TypingAnimation from "./ui/typing-animation";
 
 const images = [profile, profile2, profile3, profile4];
@@ -64,6 +66,28 @@ export default function Home() {
                 duration={40}
               />
             </p>
+            <div className="flex justify-center items-center flex-row space-x-4 mt-4 mb-2 mr-10">
+              <Link
+                to="/projects"
+                className="bg-[#57AD5B] text-white font-chivo font-semibold px-4 py-2 rounded-lg hover:bg-[#4A8C4E] transition-colors duration-300 text-sm"
+              >
+                Projects
+              </Link>
+              <a
+                href="https://github.com/Dz-devz"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGithub className="w-[30px] h-[30px] hover:bg-gray-400 transition-colors duration-300 rounded-full" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/darwinbjordan/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedin className="w-[30px] h-[30px] hover:bg-gray-400 transition-colors duration-300 rounded-md" />
+              </a>
+            </div>
           </div>
         </div>
       </div>

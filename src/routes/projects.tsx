@@ -99,7 +99,7 @@ const thumbnails = [
     title: "Invoice Pro",
     desc: "Full Stack App",
     thumbnail: invoiceprothumbnail,
-    link: "",
+    link: "https://dzinvoicepro.vercel.app/",
     github: "https://github.com/Dz-devz/invoice-print.git",
     tools: {
       javascript: javascript,

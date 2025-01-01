@@ -12,7 +12,7 @@
 
 import { Route as rootRoute } from './routes/__root'
 import { Route as ProjectsImport } from './routes/projects'
-import { Route as PlaylistImport } from './routes/playlist'
+import { Route as MySongsImport } from './routes/my-songs'
 import { Route as ContactImport } from './routes/contact'
 import { Route as AboutImport } from './routes/about'
 import { Route as IndexImport } from './routes/index'
@@ -25,9 +25,9 @@ const ProjectsRoute = ProjectsImport.update({
   getParentRoute: () => rootRoute,
 } as any)
 
-const PlaylistRoute = PlaylistImport.update({
-  id: '/playlist',
-  path: '/playlist',
+const MySongsRoute = MySongsImport.update({
+  id: '/my-songs',
+  path: '/my-songs',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -74,11 +74,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactImport
       parentRoute: typeof rootRoute
     }
-    '/playlist': {
-      id: '/playlist'
-      path: '/playlist'
-      fullPath: '/playlist'
-      preLoaderRoute: typeof PlaylistImport
+    '/my-songs': {
+      id: '/my-songs'
+      path: '/my-songs'
+      fullPath: '/my-songs'
+      preLoaderRoute: typeof MySongsImport
       parentRoute: typeof rootRoute
     }
     '/projects': {
@@ -97,7 +97,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
-  '/playlist': typeof PlaylistRoute
+  '/my-songs': typeof MySongsRoute
   '/projects': typeof ProjectsRoute
 }
 
@@ -105,7 +105,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
-  '/playlist': typeof PlaylistRoute
+  '/my-songs': typeof MySongsRoute
   '/projects': typeof ProjectsRoute
 }
 
@@ -114,16 +114,16 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
-  '/playlist': typeof PlaylistRoute
+  '/my-songs': typeof MySongsRoute
   '/projects': typeof ProjectsRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/contact' | '/playlist' | '/projects'
+  fullPaths: '/' | '/about' | '/contact' | '/my-songs' | '/projects'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/contact' | '/playlist' | '/projects'
-  id: '__root__' | '/' | '/about' | '/contact' | '/playlist' | '/projects'
+  to: '/' | '/about' | '/contact' | '/my-songs' | '/projects'
+  id: '__root__' | '/' | '/about' | '/contact' | '/my-songs' | '/projects'
   fileRoutesById: FileRoutesById
 }
 
@@ -131,7 +131,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
-  PlaylistRoute: typeof PlaylistRoute
+  MySongsRoute: typeof MySongsRoute
   ProjectsRoute: typeof ProjectsRoute
 }
 
@@ -139,7 +139,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
-  PlaylistRoute: PlaylistRoute,
+  MySongsRoute: MySongsRoute,
   ProjectsRoute: ProjectsRoute,
 }
 
@@ -158,7 +158,7 @@ export const routeTree = rootRoute
         "/",
         "/about",
         "/contact",
-        "/playlist",
+        "/my-songs",
         "/projects"
       ]
     },
@@ -171,8 +171,8 @@ export const routeTree = rootRoute
     "/contact": {
       "filePath": "contact.tsx"
     },
-    "/playlist": {
-      "filePath": "playlist.tsx"
+    "/my-songs": {
+      "filePath": "my-songs.tsx"
     },
     "/projects": {
       "filePath": "projects.tsx"

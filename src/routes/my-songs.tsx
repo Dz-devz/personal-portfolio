@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/card";
 import { createFileRoute } from "@tanstack/react-router";
 
-export const Route = createFileRoute("/playlist")({
+export const Route = createFileRoute("/my-songs")({
   component: Playlist,
 });
 
@@ -18,20 +18,20 @@ const playlistLink = [
     url: "https://www.youtube.com/watch?v=-7EWvFcnf68",
   },
   {
-    title: "Doubt (Ver.2)",
-    url: "https://www.youtube.com/watch?v=in30sWfKBSE",
-  },
-  { title: "Nightmare", url: "https://www.youtube.com/watch?v=mbUG6UvdgdM" },
-  {
     title: "Why Am I Still Still Holding You",
     url: "https://www.youtube.com/watch?v=BmaEU_1usLY",
   },
   { title: "Bother", url: "https://www.youtube.com/watch?v=ARJ-DZBfs6M" },
+  {
+    title: "Doubt (Ver.2)",
+    url: "https://www.youtube.com/watch?v=in30sWfKBSE",
+  },
   { title: "Empty voice", url: "https://www.youtube.com/watch?v=lAtM8gG5fwQ" },
   {
     title: "You are my princess",
     url: "https://www.youtube.com/watch?v=Nlf2NRix0C8",
   },
+  { title: "Nightmare", url: "https://www.youtube.com/watch?v=mbUG6UvdgdM" },
 ];
 
 function Playlist() {

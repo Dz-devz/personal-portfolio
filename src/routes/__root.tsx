@@ -123,7 +123,7 @@ function Root() {
               <span className="absolute bottom-1 left-0 w-0 h-[2px] transition-all bg-[#57AD5B] group-hover:w-full tablet-hide"></span>
             </Link>
             <Link
-              to="/playlist"
+              to="/my-songs"
               className="relative group text-center [&.active]:font-bold"
               onClick={handleLinkClick}
             >

@@ -1,6 +1,6 @@
 import atomichabits from "@/assets/atomichabits.png";
 import GitCert from "@/assets/Certificates/GitCert.jpg";
-import UiUx from "@/assets/Certificates/UiUx.jpg";
+import UiUx from "@/assets/Certificates/uiux.jpg";
 import WebDev2022 from "@/assets/Certificates/webdev2022.jpg";
 import WebDev2024 from "@/assets/Certificates/webdev2024.jpg";
 import masteryouremotion from "@/assets/masteryouremotion.png";

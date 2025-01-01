@@ -85,6 +85,39 @@ export function About() {
         </motion.div>
       </div>
       <BlurFade delay={1} inView>
+        <div className="w-full max-w-[800px] mx-auto mt-14">
+          <Card className="bg-[#ECE8E1]">
+            <CardHeader className="font-chivo text-left">
+              <CardTitle className="text-2xl text-center">
+                Introduction
+              </CardTitle>
+              <CardDescription className="text-md">
+                I am a passionate Full Stack Developer and Software Engineer. My
+                journey into this career began in high school when my teacher
+                introduced us to C programming. From the moment I started
+                coding, I realized this was what I wanted to do. It was an
+                exciting challenge that required critical thinking and
+                creativity skills I had developed through my love for chess,
+                strategy games like Dota, logic puzzles, and other activities
+                that test the mind.
+                <br /> <br />
+                For the first time in my life, I felt I had found something I
+                was genuinely good at. That realization became the driving force
+                behind my decision to pursue this path, and I’ve been committed
+                to honing my skills and growing in this field ever since.
+                <br /> <br />
+                Outside of coding, I create music to nurture my artistic side
+                and prevent burnout. <br /> <br />
+                <ul className="list-disc list-inside">
+                  <li>I'm a React/NextJS Enthusiast. 💯</li>
+                  <li>A Software Engineer 👨‍💻</li>
+                </ul>
+              </CardDescription>
+            </CardHeader>
+          </Card>
+        </div>
+      </BlurFade>
+      <BlurFade delay={1} inView>
         <div className="w-full max-w-[500px] mx-auto mt-14">
           <Card className="bg-[#ECE8E1]">
             <CardHeader className="font-chivo text-center">

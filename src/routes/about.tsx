@@ -1,4 +1,8 @@
 import atomichabits from "@/assets/atomichabits.png";
+import GitCert from "@/assets/Certificates/GitCert.jpg";
+import UiUx from "@/assets/Certificates/UiUx.jpg";
+import WebDev2022 from "@/assets/Certificates/webdev2022.jpg";
+import WebDev2024 from "@/assets/Certificates/webdev2024.jpg";
 import masteryouremotion from "@/assets/masteryouremotion.png";
 import BlurFade from "@/components/ui/blur-fade";
 import {
@@ -8,6 +12,13 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import IconCloud from "@/components/ui/icon-cloud";
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
@@ -44,14 +55,18 @@ const slugs = [
   "sass",
 ];
 
+const certs = [
+  { src: WebDev2024, alt: "Web Development 2024 Certificate" },
+  { src: GitCert, alt: "Git Certificate" },
+  { src: WebDev2022, alt: "Web Development 2022 Certificate" },
+  { src: UiUx, alt: "UI/UX Certificate" },
+];
+
 export const Route = createFileRoute("/about")({
   component: About,
 });
 
 export function About() {
-  const fullText =
-    "I'm a Passionate Full Stack Developer dedicated to honing my skills through continual growth and improvement. With a head full of profound ideas, I'm on a journey to turn concepts and ideas into reality through code.";
-
   return (
     <>
       <BlurFade delay={0.25} inView>
@@ -81,7 +96,6 @@ export function About() {
               <span className="text-primary">reflecting on the journey.</span>
             </div>
           </div>
-          {/* <span>{fullText}</span> */}
         </motion.div>
       </div>
       <BlurFade delay={1} inView>
@@ -117,6 +131,28 @@ export function About() {
           </Card>
         </div>
       </BlurFade>
+      <Carousel className="w-full max-w-[600px] mx-auto mt-14">
+        <div className="text-2xl font-bold mb-8 text-center">Certificates</div>
+        <CarouselContent>
+          {certs.map((certs, index) => (
+            <CarouselItem key={index}>
+              <div className="p-1">
+                <Card className="bg-[#ECE8E1]">
+                  <CardContent className="flex aspect-square items-center justify-center p-6">
+                    <img
+                      src={certs.src}
+                      alt={certs.alt}
+                      className="max-w-full h-auto"
+                    />
+                  </CardContent>
+                </Card>
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
+      </Carousel>
       <BlurFade delay={1} inView>
         <div className="w-full max-w-[500px] mx-auto mt-14">
           <Card className="bg-[#ECE8E1]">

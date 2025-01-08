@@ -116,7 +116,7 @@ const thumbnails = [
     title: "Belle Services",
     desc: "Services Website",
     thumbnail: BelleWebsite,
-    link: "https://belle-services.vercel.app/",
+    link: "https://www.bellecastillo.com/",
     tools: {
       javascript: javascript,
       typescript: typescript,

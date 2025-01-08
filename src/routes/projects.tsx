@@ -1,19 +1,19 @@
-import bellethumbnail from "@/assets/bellethumbnail.png";
+import BelleWebsite from "@/assets/bellewebsite.gif";
+import devthoughtsgif from "@/assets/devthoughtsgif.gif";
 import drizzlekit from "@/assets/drizzlekit.png";
 import express from "@/assets/express.png";
 import honojs from "@/assets/honojs.png";
-import invoiceprothumbnail from "@/assets/invoiceprothumbnail.png";
+import invoiceprogif from "@/assets/invoiceprothumbnail.gif";
 import javascript from "@/assets/javascript.png";
 import nextjs from "@/assets/nextjs.png";
 import nodejs from "@/assets/nodejs.png";
 import pokemon from "@/assets/pokemon.png";
-import pokemonthumbnail from "@/assets/pokemonthumbnail.png";
-import portfoliothumbnail from "@/assets/portfoliothumbnail.png";
+import pokemongif from "@/assets/pokemongif.gif";
+import dzdevthumbnail from "@/assets/portfoliothumbnail.gif";
 import prisma from "@/assets/prisma.png";
 import reactjs from "@/assets/reactjs.png";
 import tailwind from "@/assets/tailwind.png";
-import blogthumbnail from "@/assets/thumbnail.png";
-import tracknstockthumbnail from "@/assets/tracknstockthumbnail.png";
+import tracknstock from "@/assets/tracknstock.gif";
 import typescript from "@/assets/typescript.png";
 import BlurFade from "@/components/ui/blur-fade";
 import { BorderBeam } from "@/components/ui/border-beam";
@@ -33,7 +33,7 @@ const thumbnails = [
     id: 1,
     title: "TrackNStock",
     desc: "Full Stack App",
-    thumbnail: tracknstockthumbnail,
+    thumbnail: tracknstock,
     link: "https://tracknstock.up.railway.app/",
     github: "https://github.com/Dz-devz/liabilities-inventory-app.git",
     tools: {
@@ -51,7 +51,7 @@ const thumbnails = [
     id: 2,
     title: "DevThoughts",
     desc: "Full Stack App",
-    thumbnail: blogthumbnail,
+    thumbnail: devthoughtsgif,
     link: "https://devthoughtsnote.vercel.app/",
     github: "https://github.com/Dz-devz/dzdev-thoughts.git",
     tools: {
@@ -67,7 +67,7 @@ const thumbnails = [
     id: 3,
     title: "Pokemon Dex",
     desc: "Pokemon API App",
-    thumbnail: pokemonthumbnail,
+    thumbnail: pokemongif,
     link: "https://nostalgic-pokedex.vercel.app/",
     github: "",
     tools: {
@@ -83,7 +83,7 @@ const thumbnails = [
     id: 4,
     title: "Dz.dev Portfolio",
     desc: "Personal Portfolio",
-    thumbnail: portfoliothumbnail,
+    thumbnail: dzdevthumbnail,
     link: "https://dzdev.vercel.app/",
     github: "https://github.com/Dz-devz/personal-portfolio.git",
     tools: {
@@ -98,7 +98,7 @@ const thumbnails = [
     id: 4,
     title: "Invoice Pro",
     desc: "Full Stack App",
-    thumbnail: invoiceprothumbnail,
+    thumbnail: invoiceprogif,
     link: "https://dzinvoicepro.vercel.app/",
     github: "https://github.com/Dz-devz/invoice-print.git",
     tools: {
@@ -113,10 +113,10 @@ const thumbnails = [
   },
   {
     id: 5,
-    title: "Belle Website (In-progress)",
-    desc: "Personal Portfolio",
-    thumbnail: bellethumbnail,
-    link: "https://belle-website.vercel.app/",
+    title: "Belle Services",
+    desc: "Services Website",
+    thumbnail: BelleWebsite,
+    link: "https://belle-services.vercel.app/",
     tools: {
       javascript: javascript,
       typescript: typescript,
@@ -263,6 +263,21 @@ export default function Projects() {
                             <CardTitle className="text-xl md:text-2xl lg:text-3xl text-[#57AD5B]">
                               {thumbnail.title}
                             </CardTitle>
+                            <div className="flex flex-row gap-2">
+                              <Link
+                                to={thumbnail.github}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                <FaGithub />
+                              </Link>
+                              <Link
+                                to={thumbnail.link}
+                                rel="noopener noreferrer"
+                              >
+                                <FaLink />
+                              </Link>
+                            </div>
                             <CardDescription className="text-muted-foreground text-sm md:text-base lg:text-lg">
                               {thumbnail.desc}
                             </CardDescription>

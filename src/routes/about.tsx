@@ -80,24 +80,16 @@ export function About() {
         </div>
         <div className="text-center text-4xl font-bold font-chivo mt-4 "></div>
       </BlurFade>
-      <div className="relative flex items-center justify-center font-chivo">
-        <IconCloud iconSlugs={slugs} />
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 5 }}
-          className="absolute text-center text-2xl font-bold max-w-[800px] p-4"
-        >
-          <div>
-            <span className="text-primary">
-              "Mistake Means Progress" — dz.dev,{" "}
-            </span>
-            <div>
-              <span className="text-primary">reflecting on the journey.</span>
-            </div>
-          </div>
-        </motion.div>
-      </div>
+      {/* <div className="flex flex-col items-center justify-center mt-16  font-chivo mb-8">
+        <h2 className="text-4xl">Testimonial</h2>
+        <div>⭐⭐⭐⭐⭐</div>
+        <div className="w-[800px]">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
+          praesentium ducimus, illum deleniti facilis dolorem! Similique
+          deleniti magni labore voluptate, aut dolor maiores, praesentium
+          assumenda nihil repellat in sequi maxime.
+        </div>
+      </div> */}
       <BlurFade delay={1} inView>
         <div className="w-full max-w-[800px] mx-auto mt-14">
           <Card className="bg-[#ECE8E1]">
@@ -131,6 +123,24 @@ export function About() {
           </Card>
         </div>
       </BlurFade>
+      <div className="relative flex items-center justify-center font-chivo">
+        <IconCloud iconSlugs={slugs} />
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 5 }}
+          className="absolute text-center text-2xl font-bold max-w-[800px] p-4"
+        >
+          <div>
+            <span className="text-primary">
+              "Mistake Means Progress" — dz.dev,{" "}
+            </span>
+            <div>
+              <span className="text-primary">reflecting on the journey.</span>
+            </div>
+          </div>
+        </motion.div>
+      </div>
       <Carousel className="w-full max-w-[600px] mx-auto mt-14">
         <div className="text-2xl font-bold mb-8 text-center">Certificates</div>
         <CarouselContent>

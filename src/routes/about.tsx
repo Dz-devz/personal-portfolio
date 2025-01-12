@@ -123,23 +123,25 @@ export function About() {
           </Card>
         </div>
       </BlurFade>
-      <h2 className="text-2xl mt-16 text-center mb-2 font-chivo">
-        Testimonial
-      </h2>
-      <div className="flex flex-row items-center justify-center font-chivo mb-8">
-        {testimonials.map((testimonial) => (
-          <Card className="bg-[#ECE8E1] w-full max-w-[600px] mx-auto">
-            <div className="flex flex-col items-center">
-              <Avatar className="mt-2">
-                <AvatarImage src={testimonial.src} alt={testimonial.alt} />
-                <AvatarFallback>CN</AvatarFallback>
-              </Avatar>
-              <div>⭐⭐⭐⭐⭐</div>
-              <div className="p-4">{testimonial.desc}</div>
-            </div>
-          </Card>
-        ))}
-      </div>
+      <BlurFade delay={1.3} inView>
+        <h2 className="text-2xl mt-16 text-center mb-2 font-chivo">
+          Testimonial
+        </h2>
+        <div className="flex flex-row items-center justify-center font-chivo mb-8">
+          {testimonials.map((testimonial) => (
+            <Card className="bg-[#ECE8E1] w-full max-w-[600px] mx-auto">
+              <div className="flex flex-col items-center">
+                <Avatar className="mt-2">
+                  <AvatarImage src={testimonial.src} alt={testimonial.alt} />
+                  <AvatarFallback>CN</AvatarFallback>
+                </Avatar>
+                <div>⭐⭐⭐⭐⭐</div>
+                <div className="p-4">{testimonial.desc}</div>
+              </div>
+            </Card>
+          ))}
+        </div>
+      </BlurFade>
       <div className="relative flex items-center justify-center font-chivo">
         <IconCloud iconSlugs={slugs} />
         <motion.div
@@ -200,7 +202,7 @@ export function About() {
           rel="noopener noreferrer"
           className="mx-auto cursor-pointer"
         >
-          <BlurFade delay={2} inView>
+          <BlurFade delay={1.5} inView>
             <Card className="max-w-[350px] sm:max-w-[600px] mt-10 w-full h-auto  border-[1px] bg-[#ECE8E1] border-black mb-20 overflow-hidden">
               <CardHeader className="font-chivo text-center">
                 <CardTitle className="leading-2">
@@ -228,7 +230,7 @@ export function About() {
           rel="noopener noreferrer"
           className="mx-auto cursor-pointer"
         >
-          <BlurFade delay={2} inView>
+          <BlurFade delay={1.8} inView>
             <Card className="max-w-[350px] sm:max-w-[600px] mt-10 w-full h-auto border-[1px] bg-[#ECE8E1] border-black mb-20 overflow-hidden">
               <CardHeader className="font-chivo text-center">
                 <CardTitle className="leading-2">

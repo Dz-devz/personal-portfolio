@@ -13,6 +13,7 @@ import dzdevthumbnail from "@/assets/portfoliothumbnail.gif";
 import prisma from "@/assets/prisma.png";
 import reactjs from "@/assets/reactjs.png";
 import tailwind from "@/assets/tailwind.png";
+import taskapigif from "@/assets/taskapigif.gif";
 import tracknstock from "@/assets/tracknstock.gif";
 import typescript from "@/assets/typescript.png";
 import BlurFade from "@/components/ui/blur-fade";
@@ -40,7 +41,7 @@ const thumbnails = [
       javascript: javascript,
       typescript: typescript,
       nextjs: reactjs,
-      prisma: drizzlekit,
+      drizzlekit: drizzlekit,
       tailwind: tailwind,
       node: nodejs,
       hono: honojs,
@@ -95,7 +96,7 @@ const thumbnails = [
     category: "Personal",
   },
   {
-    id: 4,
+    id: 5,
     title: "Invoice Pro",
     desc: "Full Stack App",
     thumbnail: invoiceprogif,
@@ -112,7 +113,23 @@ const thumbnails = [
     category: "Personal",
   },
   {
-    id: 5,
+    id: 6,
+    title: "Task Api",
+    desc: "API with Swagger UI",
+    thumbnail: taskapigif,
+    link: "https://task-api-prod.up.railway.app",
+    github: "https://github.com/Dz-devz/task-api",
+    tools: {
+      javascript: javascript,
+      typescript: typescript,
+      node: nodejs,
+      hono: honojs,
+      prisma: prisma,
+    },
+    category: "Personal",
+  },
+  {
+    id: 7,
     title: "Belle Services",
     desc: "Services Website",
     thumbnail: BelleWebsite,

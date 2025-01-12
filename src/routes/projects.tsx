@@ -12,6 +12,7 @@ import pokemongif from "@/assets/pokemongif.gif";
 import dzdevthumbnail from "@/assets/portfoliothumbnail.gif";
 import prisma from "@/assets/prisma.png";
 import reactjs from "@/assets/reactjs.png";
+import swagger from "@/assets/swagger.png";
 import tailwind from "@/assets/tailwind.png";
 import taskapigif from "@/assets/taskapigif.gif";
 import tracknstock from "@/assets/tracknstock.gif";
@@ -125,6 +126,7 @@ const thumbnails = [
       node: nodejs,
       hono: honojs,
       prisma: prisma,
+      swagger: swagger,
     },
     category: "Personal",
   },

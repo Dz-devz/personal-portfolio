@@ -4,6 +4,8 @@ import UiUx from "@/assets/Certificates/uiux.jpg";
 import WebDev2022 from "@/assets/Certificates/webdev2022.jpg";
 import WebDev2024 from "@/assets/Certificates/webdev2024.jpg";
 import masteryouremotion from "@/assets/masteryouremotion.png";
+import belle from "@/assets/Testimonial/profile.jpg";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import BlurFade from "@/components/ui/blur-fade";
 import {
   Card,
@@ -55,6 +57,14 @@ const slugs = [
   "sass",
 ];
 
+const testimonials = [
+  {
+    src: belle,
+    desc: "I absolutely love my website! Darwin exceeded my expectations and went above and beyond on the project. He fulfilled all of my requests perfectly. The entire process was smooth, thanks to his excellent communication skills. I’m thrilled with the final result and couldn’t be happier with the experience!",
+    alt: "Belle Profile and Testimonial",
+  },
+];
+
 const certs = [
   { src: WebDev2024, alt: "Web Development 2024 Certificate" },
   { src: GitCert, alt: "Git Certificate" },
@@ -80,16 +90,6 @@ export function About() {
         </div>
         <div className="text-center text-4xl font-bold font-chivo mt-4 "></div>
       </BlurFade>
-      {/* <div className="flex flex-col items-center justify-center mt-16  font-chivo mb-8">
-        <h2 className="text-4xl">Testimonial</h2>
-        <div>⭐⭐⭐⭐⭐</div>
-        <div className="w-[800px]">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
-          praesentium ducimus, illum deleniti facilis dolorem! Similique
-          deleniti magni labore voluptate, aut dolor maiores, praesentium
-          assumenda nihil repellat in sequi maxime.
-        </div>
-      </div> */}
       <BlurFade delay={1} inView>
         <div className="w-full max-w-[800px] mx-auto mt-14">
           <Card className="bg-[#ECE8E1]">
@@ -123,6 +123,23 @@ export function About() {
           </Card>
         </div>
       </BlurFade>
+      <h2 className="text-2xl mt-16 text-center mb-2 font-chivo">
+        Testimonial
+      </h2>
+      <div className="flex flex-row items-center justify-center font-chivo mb-8">
+        {testimonials.map((testimonial) => (
+          <Card className="bg-[#ECE8E1] w-full max-w-[600px] mx-auto">
+            <div className="flex flex-col items-center">
+              <Avatar className="mt-2">
+                <AvatarImage src={testimonial.src} alt={testimonial.alt} />
+                <AvatarFallback>CN</AvatarFallback>
+              </Avatar>
+              <div>⭐⭐⭐⭐⭐</div>
+              <div className="p-4">{testimonial.desc}</div>
+            </div>
+          </Card>
+        ))}
+      </div>
       <div className="relative flex items-center justify-center font-chivo">
         <IconCloud iconSlugs={slugs} />
         <motion.div

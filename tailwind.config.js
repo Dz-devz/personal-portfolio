@@ -5,8 +5,11 @@ export default {
   theme: {
     extend: {
       screens: {
-        laptop: "1366px",
         bigger: "1440px",
+        laptop: "1366px",
+        mobileL: "425px",
+        mobileM: "375px",
+        mobileS: "320px",
       },
       boxShadow: {
         "inner-custom": "inset 6px 6px 13px rgba(236, 232, 225, 1)",

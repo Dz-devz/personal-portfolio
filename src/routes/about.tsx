@@ -165,7 +165,7 @@ export function About() {
           </div>
         </motion.div>
       </div>
-      <Carousel className="w-full max-w-[600px] mx-auto mt-14">
+      <Carousel className="w-full 2xl:max-w-[600px] xl:max-w-[600px] lg:max-w-[600px] md:max-w-[450px] sm:max-w-[400px] mobileL:max-w-[300px] mobileM:max-w-[250px] mobileS:max-w-[220px] mx-auto mt-14">
         <div className="text-2xl font-bold mb-8 text-center">Certificates</div>
         <CarouselContent>
           {certs.map((certs, index) => (
@@ -176,7 +176,7 @@ export function About() {
                     <img
                       src={certs.src}
                       alt={certs.alt}
-                      className="max-w-full h-auto"
+                      className="max-w-full h-auto rounded-xl"
                     />
                   </CardContent>
                 </Card>
@@ -200,15 +200,15 @@ export function About() {
           </Card>
         </div>
       </BlurFade>
-      <div className="flex flex-col md:flex-row items-center justify-center">
+      <div className="flex flex-col lg:flex-row items-center justify-center">
         <a
           href="https://devthoughtsnote.vercel.app/posts/6"
           target="_blank"
           rel="noopener noreferrer"
           className="mx-auto cursor-pointer"
         >
-          <BlurFade delay={1.5} inView>
-            <Card className="max-w-[350px] sm:max-w-[600px] mt-10 w-full h-auto  border-[1px] bg-[#ECE8E1] border-black mb-20 overflow-hidden">
+          <BlurFade delay={1.3} inView>
+            <Card className="2xl:max-w-[600px] xl:max-w-[500px] lg:max-w-[400px] md:max-w-[500px] sm:max-w-[400px] mobileL:max-w-[350px] mobileM:max-w-[320px] mobileS:max-w-[280px] mt-10 w-full h-auto border-[1px] bg-[#ECE8E1] border-black mb-20 overflow-hidden">
               <CardHeader className="font-chivo text-center">
                 <CardTitle className="leading-2">
                   Master Your Emotions <br /> Author:
@@ -235,8 +235,8 @@ export function About() {
           rel="noopener noreferrer"
           className="mx-auto cursor-pointer"
         >
-          <BlurFade delay={1.8} inView>
-            <Card className="max-w-[350px] sm:max-w-[600px] mt-10 w-full h-auto border-[1px] bg-[#ECE8E1] border-black mb-20 overflow-hidden">
+          <BlurFade delay={1.6} inView>
+            <Card className="2xl:max-w-[600px] xl:max-w-[500px] lg:max-w-[400px] md:max-w-[500px] sm:max-w-[400px] mobileL:max-w-[350px] mobileM:max-w-[320px] mobileS:max-w-[280px] mt-10 w-full h-auto border-[1px] bg-[#ECE8E1] border-black mb-20 overflow-hidden">
               <CardHeader className="font-chivo text-center">
                 <CardTitle className="leading-2">
                   Atomic Habits <br /> Author:
@@ -250,7 +250,7 @@ export function About() {
                   <img
                     src={atomichabits}
                     alt="Atomic Habits by: James Clear"
-                    className="max-w-[500px] h-auto"
+                    className="max-w-full h-auto"
                   />
                 </CardContent>
               </CardHeader>

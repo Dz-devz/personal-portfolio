@@ -92,6 +92,24 @@ export function About() {
         </div>
         <div className="text-center text-4xl font-bold font-chivo mt-4 "></div>
       </BlurFade>
+      <div className="relative flex items-center justify-center font-chivo mt-16">
+        <IconCloud iconSlugs={slugs} />
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 5 }}
+          className="absolute text-center text-2xl font-bold max-w-[800px] p-4"
+        >
+          <div>
+            <span className="text-primary">
+              "Mistake Means Progress" — dz.dev,{" "}
+            </span>
+            <div>
+              <span className="text-primary">reflecting on my journey.</span>
+            </div>
+          </div>
+        </motion.div>
+      </div>
       <BlurFade delay={1} inView>
         <div className="w-full max-w-[800px] mx-auto mt-14">
           <Card className="bg-[#ECE8E1]">
@@ -125,7 +143,7 @@ export function About() {
           </Card>
         </div>
       </BlurFade>
-      <BlurFade delay={1.3} inView>
+      <BlurFade delay={1.2} inView>
         <h2 className="text-2xl mt-16 text-center mb-2 font-chivo">
           Testimonial
         </h2>
@@ -147,24 +165,7 @@ export function About() {
           ))}
         </div>
       </BlurFade>
-      <div className="relative flex items-center justify-center font-chivo">
-        <IconCloud iconSlugs={slugs} />
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 5 }}
-          className="absolute text-center text-2xl font-bold max-w-[800px] p-4"
-        >
-          <div>
-            <span className="text-primary">
-              "Mistake Means Progress" — dz.dev,{" "}
-            </span>
-            <div>
-              <span className="text-primary">reflecting on the journey.</span>
-            </div>
-          </div>
-        </motion.div>
-      </div>
+
       <Carousel className="w-full 2xl:max-w-[600px] xl:max-w-[600px] lg:max-w-[600px] md:max-w-[450px] sm:max-w-[400px] mobileL:max-w-[300px] mobileM:max-w-[250px] mobileS:max-w-[220px] mx-auto mt-14">
         <div className="text-2xl font-bold mb-8 text-center">Certificates</div>
         <CarouselContent>

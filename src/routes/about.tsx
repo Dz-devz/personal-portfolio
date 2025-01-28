@@ -35,6 +35,8 @@ const slugs = [
   "css3",
   "nodedotjs",
   "express",
+  "hono",
+  "framer",
   "nextdotjs",
   "prisma",
   "postgresql",
@@ -46,13 +48,13 @@ const slugs = [
   "figma",
   "bun",
   "canva",
-  "prism",
+  "prisma",
   "drizzle",
   "hono",
   "mysql",
   "postman",
   "spring",
-  "tailwind",
+  "tailwindcss",
   "bootstrap",
   "sass",
 ];
@@ -128,8 +130,11 @@ export function About() {
           Testimonial
         </h2>
         <div className="flex flex-row items-center justify-center font-chivo mb-8">
-          {testimonials.map((testimonial) => (
-            <Card className="bg-[#ECE8E1] w-full max-w-[600px] mx-auto">
+          {testimonials.map((testimonial, index) => (
+            <Card
+              className="bg-[#ECE8E1] w-full max-w-[600px] mx-auto"
+              key={index}
+            >
               <div className="flex flex-col items-center">
                 <Avatar className="mt-2">
                   <AvatarImage src={testimonial.src} alt={testimonial.alt} />

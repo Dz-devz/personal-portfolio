@@ -59,13 +59,14 @@ function Playlist() {
         </div>
       </BlurFade>
       <BlurFade delay={1.5} inView>
-        <div className="grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-8">
+        <div className="grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-8">
           {playlistLink.map((video, index) => (
             <div key={index} className="mb-8">
-              <h3 className="mb-4 text-xl font-semibold font-chivo">
+              <h3 className="mb-4 text-xl font-semibold font-chivo 2xl:text-left xl:text-left lg:text-left md:text-left sm:text-left mobileL:text-center mobileM:text-center mobileS:text-center">
                 {video.title}
               </h3>
               <iframe
+                className="2xl:max-w-[400px] xl:max-w-[400px] lg:max-w-[400px] md:max-w-[400px] sm:max-w-[400px] mobileL:max-w-[350px] mobileM:max-w-[320px] mobileS:max-w-[300px] flex items-center justify-center mx-auto 2xl:max-h-[300px] xl:max-h-[300px] lg:max-h-[300px] md:max-h-[300px] sm:max-h-[300px] mobileL:max-h-[250px] mobileM:max-h-[230px] mobileS:max-h-[200px]"
                 width="400"
                 height="300"
                 src={video.url.replace("watch?v=", "embed/")}

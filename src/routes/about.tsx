@@ -98,7 +98,7 @@ export function About() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 5 }}
-          className="absolute text-center text-2xl font-bold max-w-[800px] p-4"
+          className="absolute text-center text-2xl font-bold max-w-[800px] p-4 mb-8"
         >
           <div>
             <span className="text-primary">

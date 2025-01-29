@@ -1,6 +1,7 @@
 import BelleWebsite from "@/assets/bellewebsite.gif";
 import devthoughtsgif from "@/assets/devthoughtsgif.gif";
 import drizzlekit from "@/assets/drizzlekit.png";
+import dztaskthumbnail from "@/assets/dztaskthumbnail.gif";
 import express from "@/assets/express.png";
 import honojs from "@/assets/honojs.png";
 import invoiceprogif from "@/assets/invoiceprothumbnail.gif";
@@ -134,7 +135,7 @@ const thumbnails = [
     id: 7,
     title: "Task App",
     desc: "React Native Expo Task App",
-    thumbnail: "dztaskthumbnail",
+    thumbnail: dztaskthumbnail,
     link: "",
     github: "https://github.com/Dz-devz/dz-task-expo",
     tools: {

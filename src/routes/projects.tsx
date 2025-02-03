@@ -119,7 +119,7 @@ const thumbnails = [
     title: "Task Api",
     desc: "API with Swagger UI",
     thumbnail: taskapigif,
-    link: "https://task-api-prod.up.railway.app",
+    link: "https://taskapi.up.railway.app/",
     github: "https://github.com/Dz-devz/task-api",
     tools: {
       javascript: javascript,

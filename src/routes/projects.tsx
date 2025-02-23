@@ -8,6 +8,9 @@ import invoiceprogif from "@/assets/invoiceprothumbnail.gif";
 import javascript from "@/assets/javascript.png";
 import nextjs from "@/assets/nextjs.png";
 import nodejs from "@/assets/nodejs.png";
+import paymongoapithumbnail from "@/assets/paymongoapithumbnail.gif";
+import paymongologo from "@/assets/paymongologo.png";
+import paymongothumbnail from "@/assets/paymongothumbnail.gif";
 import pokemon from "@/assets/pokemon.png";
 import pokemongif from "@/assets/pokemongif.gif";
 import dzdevthumbnail from "@/assets/portfoliothumbnail.gif";
@@ -151,6 +154,37 @@ const thumbnails = [
   },
   {
     id: 8,
+    title: "Paymongo Payment Integration",
+    desc: "Test Payment Integration",
+    thumbnail: paymongothumbnail,
+    link: "https://dzdev-paymongo.vercel.app/",
+    github: "https://github.com/Dz-devz/paymongo-react-payment",
+    tools: {
+      javascript: javascript,
+      typescript: typescript,
+      paymongo: paymongologo,
+      reactjs: reactjs,
+    },
+    category: "Personal",
+  },
+  {
+    id: 9,
+    title: "Paymongo Payment API",
+    desc: "Test Payment API",
+    thumbnail: paymongoapithumbnail,
+    link: "https://paymongo-payment-api-production.up.railway.app/api-docs/",
+    github: "https://github.com/Dz-devz/paymongo-payment-api",
+    tools: {
+      javascript: javascript,
+      paymongo: paymongologo,
+      node: nodejs,
+      hono: express,
+      prisma: prisma,
+    },
+    category: "Personal",
+  },
+  {
+    id: 10,
     title: "Belle Services",
     desc: "Services Website",
     thumbnail: BelleWebsite,

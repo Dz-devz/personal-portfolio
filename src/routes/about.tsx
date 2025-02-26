@@ -57,6 +57,7 @@ const slugs = [
   "tailwindcss",
   "bootstrap",
   "sass",
+  "docker",
 ];
 
 const testimonials = [

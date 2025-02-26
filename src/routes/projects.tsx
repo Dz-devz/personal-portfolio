@@ -40,7 +40,7 @@ const thumbnails = [
     title: "TrackNStock",
     desc: "Full Stack App",
     thumbnail: tracknstock,
-    link: "https://tracknstock.up.railway.app/",
+    link: "https://liabilities-railway-frontend.onrender.com/",
     github: "https://github.com/Dz-devz/liabilities-inventory-app.git",
     tools: {
       javascript: javascript,
@@ -122,7 +122,7 @@ const thumbnails = [
     title: "Task Api",
     desc: "API with Swagger UI",
     thumbnail: taskapigif,
-    link: "https://taskapi.up.railway.app/",
+    link: "https://task-api-si4v.onrender.com/",
     github: "https://github.com/Dz-devz/task-api",
     tools: {
       javascript: javascript,
@@ -172,7 +172,7 @@ const thumbnails = [
     title: "Paymongo Payment API",
     desc: "Test Payment API",
     thumbnail: paymongoapithumbnail,
-    link: "https://paymongo-payment-api-production.up.railway.app/api-docs/",
+    link: "https://paymongo-payment-api.onrender.com/api-docs/",
     github: "https://github.com/Dz-devz/paymongo-payment-api",
     tools: {
       javascript: javascript,

@@ -150,7 +150,7 @@ function Root() {
                 <FormControlLabel
                   onClick={() => setDefault(!isDefault)}
                   control={<IOSSwitch sx={{ m: 1 }} defaultChecked />}
-                  label={isDefault ? "Default" : "Custom"}
+                  label={isDefault ? "Multi-Page" : "Single Page"}
                 />
               </FormGroup>
             </motion.div>

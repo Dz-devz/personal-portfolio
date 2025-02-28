@@ -1,4 +1,5 @@
 import logo from "@/assets/dzlogo.png";
+import Footer from "@/components/footer";
 import { IOSSwitch } from "@/components/ui/ios-switch";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormGroup from "@mui/material/FormGroup";
@@ -160,6 +161,7 @@ function Root() {
         <div className="bg-[#ECE8E1] min-h-screen flex flex-col">
           <Outlet />
         </div>
+        <Footer />
       </DefaultContext.Provider>
     </>
   );

@@ -102,7 +102,7 @@ function Root() {
               initial="hidden"
               animate="visible"
               variants={pageVariants}
-              className={`flex flex-col md:flex-row gap-4 lg:gap-[98px] md:[50px] ${
+              className={`flex flex-col md:flex-row gap-4 lg:gap-[98px] md:gap-[50px] ${
                 menuOpen ? "block" : "hidden md:flex"
               }`}
             >

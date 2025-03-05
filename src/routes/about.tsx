@@ -1,4 +1,5 @@
 import atomichabits from "@/assets/atomichabits.png";
+import DockerKub from "@/assets/Certificates/dockerandkubernetes.jpg";
 import GitCert from "@/assets/Certificates/GitCert.jpg";
 import UiUx from "@/assets/Certificates/uiux.jpg";
 import WebDev2022 from "@/assets/Certificates/webdev2022.jpg";
@@ -72,6 +73,7 @@ const testimonials = [
 ];
 
 const certs = [
+  { src: DockerKub, alt: "Docker and Kubernetes 2025 Certificate" },
   { src: WebDev2024, alt: "Web Development 2024 Certificate" },
   { src: GitCert, alt: "Git Certificate" },
   { src: WebDev2022, alt: "Web Development 2022 Certificate" },

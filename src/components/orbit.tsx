@@ -104,7 +104,7 @@ export default function OrbitingIcons() {
   }, [theme]);
 
   return (
-    <>
+    <section id="contact">
       <div className="relative min-h-screen w-full overflow-hidden bg-[#ECE8E1]">
         <Particles
           className="absolute w-full h-full z-0 inset-0"
@@ -226,6 +226,6 @@ export default function OrbitingIcons() {
           </motion.div>
         </div>
       </div>
-    </>
+    </section>
   );
 }

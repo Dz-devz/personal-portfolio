@@ -201,7 +201,7 @@ const thumbnails = [
 
 export default function Projects() {
   return (
-    <>
+    <section id="projects">
       <BlurFade delay={0.25} inView>
         <div className="text-2xl text-center font-chivo mb-2 font-bold">
           Projects
@@ -375,6 +375,6 @@ export default function Projects() {
             </BlurFade>
           ))}
       </div>
-    </>
+    </section>
   );
 }

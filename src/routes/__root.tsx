@@ -47,6 +47,13 @@ function Root() {
     setMenuOpen(false);
   };
 
+  const handleScrollTo = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       <DefaultContext.Provider value={isDefault}>
@@ -106,46 +113,93 @@ function Root() {
                 menuOpen ? "block" : "hidden md:flex"
               }`}
             >
-              <Link
-                to="/"
-                className="relative group text-center [&.active]:font-bold"
-                onClick={handleLinkClick}
-              >
-                Home
-                <span className="absolute bottom-1 left-0 w-0 h-[2px] transition-all bg-[#57AD5B] group-hover:w-full tablet-hide"></span>
-              </Link>
-              <Link
-                to="/about"
-                className="relative group text-center [&.active]:font-bold"
-                onClick={handleLinkClick}
-              >
-                About
-                <span className="absolute bottom-1 left-0 w-0 h-[2px] transition-all bg-[#57AD5B] group-hover:w-full tablet-hide"></span>
-              </Link>
-              <Link
-                to="/projects"
-                className="relative group text-center [&.active]:font-bold"
-                onClick={handleLinkClick}
-              >
-                Projects
-                <span className="absolute bottom-1 left-0 w-0 h-[2px] transition-all bg-[#57AD5B] group-hover:w-full tablet-hide"></span>
-              </Link>
-              <Link
-                to="/my-songs"
-                className="relative group text-center [&.active]:font-bold"
-                onClick={handleLinkClick}
-              >
-                My Songs
-                <span className="absolute bottom-1 left-0 w-0 h-[2px] transition-all bg-[#57AD5B] group-hover:w-full tablet-hide"></span>
-              </Link>
-              <Link
-                to="/contact"
-                className="relative group text-center [&.active]:font-bold"
-                onClick={handleLinkClick}
-              >
-                Contact
-                <span className="absolute bottom-1 left-0 w-0 h-[2px] transition-all bg-[#57AD5B] group-hover:w-full tablet-hide"></span>
-              </Link>
+              {isDefault ? (
+                <>
+                  <Link
+                    to="/"
+                    className="relative group text-center [&.active]:font-bold"
+                    onClick={handleLinkClick}
+                  >
+                    Home
+                    <span className="absolute bottom-1 left-0 w-0 h-[2px] transition-all bg-[#57AD5B] group-hover:w-full tablet-hide"></span>
+                  </Link>
+                  <Link
+                    to="/about"
+                    className="relative group text-center [&.active]:font-bold"
+                    onClick={handleLinkClick}
+                  >
+                    About
+                    <span className="absolute bottom-1 left-0 w-0 h-[2px] transition-all bg-[#57AD5B] group-hover:w-full tablet-hide"></span>
+                  </Link>
+                  <Link
+                    to="/projects"
+                    className="relative group text-center [&.active]:font-bold"
+                    onClick={handleLinkClick}
+                  >
+                    Projects
+                    <span className="absolute bottom-1 left-0 w-0 h-[2px] transition-all bg-[#57AD5B] group-hover:w-full tablet-hide"></span>
+                  </Link>
+                  <Link
+                    to="/my-songs"
+                    className="relative group text-center [&.active]:font-bold"
+                    onClick={handleLinkClick}
+                  >
+                    My Songs
+                    <span className="absolute bottom-1 left-0 w-0 h-[2px] transition-all bg-[#57AD5B] group-hover:w-full tablet-hide"></span>
+                  </Link>
+                  <Link
+                    to="/contact"
+                    className="relative group text-center [&.active]:font-bold"
+                    onClick={handleLinkClick}
+                  >
+                    Contact
+                    <span className="absolute bottom-1 left-0 w-0 h-[2px] transition-all bg-[#57AD5B] group-hover:w-full tablet-hide"></span>
+                  </Link>
+                </>
+              ) : (
+                <>
+                  <a
+                    href="#home"
+                    onClick={() => handleScrollTo("home")}
+                    className="relative group text-center"
+                  >
+                    Home
+                    <span className="absolute bottom-1 left-0 w-0 h-[2px] transition-all bg-[#57AD5B] group-hover:w-full"></span>
+                  </a>
+                  <a
+                    href="#about"
+                    onClick={() => handleScrollTo("about")}
+                    className="relative group text-center"
+                  >
+                    About
+                    <span className="absolute bottom-1 left-0 w-0 h-[2px] transition-all bg-[#57AD5B] group-hover:w-full"></span>
+                  </a>
+                  <a
+                    href="#projects"
+                    onClick={() => handleScrollTo("projects")}
+                    className="relative group text-center"
+                  >
+                    Projects
+                    <span className="absolute bottom-1 left-0 w-0 h-[2px] transition-all bg-[#57AD5B] group-hover:w-full"></span>
+                  </a>
+                  <a
+                    href="#my-songs"
+                    onClick={() => handleScrollTo("my-songs")}
+                    className="relative group text-center"
+                  >
+                    My Songs
+                    <span className="absolute bottom-1 left-0 w-0 h-[2px] transition-all bg-[#57AD5B] group-hover:w-full"></span>
+                  </a>
+                  <a
+                    href="#contact"
+                    onClick={() => handleScrollTo("contact")}
+                    className="relative group text-center"
+                  >
+                    Contact
+                    <span className="absolute bottom-1 left-0 w-0 h-[2px] transition-all bg-[#57AD5B] group-hover:w-full"></span>
+                  </a>
+                </>
+              )}
 
               <FormGroup>
                 <FormControlLabel

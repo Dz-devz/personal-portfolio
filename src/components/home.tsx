@@ -42,7 +42,7 @@ export default function Home() {
   }, []);
 
   return (
-    <>
+    <section id="home">
       <div className="relative flex items-start justify-center bg-[#ECE8E1]">
         {isDefault ? (
           <div className="relative mt-10">
@@ -98,6 +98,6 @@ export default function Home() {
           <OnePage />
         )}
       </div>
-    </>
+    </section>
   );
 }

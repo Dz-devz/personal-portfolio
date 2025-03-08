@@ -80,7 +80,7 @@ const certs = [
 
 export default function About() {
   return (
-    <>
+    <section id="about">
       <BlurFade delay={0.25} inView>
         <div className="text-center text-2xl font-bold font-chivo">
           <span>About Me</span>
@@ -258,6 +258,6 @@ export default function About() {
           </BlurFade>
         </a>
       </div>
-    </>
+    </section>
   );
 }

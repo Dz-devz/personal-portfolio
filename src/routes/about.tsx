@@ -5,6 +5,7 @@ import UiUx from "@/assets/Certificates/uiux.jpg";
 import WebDev2022 from "@/assets/Certificates/webdev2022.jpg";
 import WebDev2024 from "@/assets/Certificates/webdev2024.jpg";
 import masteryouremotion from "@/assets/masteryouremotion.png";
+import romero from "@/assets/Testimonial/adam.jpg";
 import belle from "@/assets/Testimonial/profile.jpg";
 import OnePage from "@/components/one-page";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -69,6 +70,10 @@ const testimonials = [
     src: belle,
     desc: "I absolutely love my website! Darwin exceeded my expectations and went above and beyond on the project. He fulfilled all of my requests perfectly. The entire process was smooth, thanks to his excellent communication skills. I’m thrilled with the final result and couldn’t be happier with the experience!",
     alt: "Belle Profile and Testimonial",
+  },
+  {
+    src: romero,
+    desc: "I’m honestly so happy with my website! Darwin didn’t just meet my expectations. He listened to every idea I had and somehow made them even better. The whole process felt super easy because he kept me in the loop and was always quick to respond. I’m beyond thrilled with how everything turned out. It’s exactly what I wanted, and working with him was such a great experience!",
   },
 ];
 

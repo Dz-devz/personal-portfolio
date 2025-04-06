@@ -1,10 +1,11 @@
-import BelleWebsite from "@/assets/bellewebsite.gif";
+import belleWebsite from "@/assets/bellewebsite.gif";
 import devthoughtsgif from "@/assets/devthoughtsgif.gif";
 import drizzlekit from "@/assets/drizzlekit.png";
 import dztaskthumbnail from "@/assets/dztaskthumbnail.gif";
 import express from "@/assets/express.png";
 import honojs from "@/assets/honojs.png";
 import invoiceprogif from "@/assets/invoiceprothumbnail.gif";
+import jabuoieathumbnail from "@/assets/jabuoieathumbnail.gif";
 import javascript from "@/assets/javascript.png";
 import nextjs from "@/assets/nextjs.png";
 import nodejs from "@/assets/nodejs.png";
@@ -190,12 +191,26 @@ const thumbnails = [
     id: 10,
     title: "Belle Services",
     desc: "Services Website",
-    thumbnail: BelleWebsite,
+    thumbnail: belleWebsite,
     link: "https://www.bellecastillo.com/",
     tools: {
       javascript: javascript,
       typescript: typescript,
       reactjs: reactjs,
+      tailwind: tailwind,
+    },
+    category: "Client",
+  },
+  {
+    id: 11,
+    title: "Jabuoiea Portfolio",
+    desc: "Portfolio Website",
+    thumbnail: jabuoieathumbnail,
+    link: "https://jabuoiea.vercel.app/",
+    tools: {
+      javascript: javascript,
+      typescript: typescript,
+      reactjs: nextjs,
       tailwind: tailwind,
     },
     category: "Client",

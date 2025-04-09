@@ -5,7 +5,7 @@ export default function Footer() {
     //   <a href="mailto:contact.dz.dev@gmail.com">dz.dev.contact@gmail.com</a>
     // </footer>
     <>
-      <footer className="fixed right-0 left-0 top-1/2 p-2 px-3 text-[8px] tracking-widest rotate-180 2xl:flex xl:flex lg:hidden md:hidden sm:hidden mobileL:hidden mobileM:hidden mobileS:hidden">
+      <footer className="fixed right-0 left-0 top-1/2 p-2 px-1 text-[8px] tracking-widest rotate-180 2xl:flex xl:flex lg:hidden md:hidden sm:hidden mobileL:hidden mobileM:hidden mobileS:hidden">
         <span className="rotate-90 inline-block font-chivo">
           <a
             href="https://github.com/Dz-devz"
@@ -17,7 +17,7 @@ export default function Footer() {
           </a>
         </span>
       </footer>
-      <footer className="fixed right-0 left-0 top-1/2 p-2 px-3 text-[8px] tracking-widest 2xl:flex xl:flex lg:hidden md:hidden sm:hidden mobileL:hidden mobileM:hidden mobileS:hidden">
+      <footer className="fixed right-0 left-0 top-1/2 p-2 px-1 text-[8px] tracking-widest 2xl:flex xl:flex lg:hidden md:hidden sm:hidden mobileL:hidden mobileM:hidden mobileS:hidden">
         <span className="rotate-90 inline-block font-chivo">
           <a href="mailto:contact.dz.dev@gmail.com">
             ──── dz.dev.contact@gmail.com ────

@@ -243,7 +243,7 @@ export default function Projects() {
               .map((thumbnail, idx) => (
                 <BlurFade key={thumbnail.id} delay={1 + idx * 0.5} inView>
                   <TooltipProvider>
-                    <Card className="relative mb-4 p-4 lg:w-96 lg:h-36 md:w-96 md:h-36 sm:w-40 sm:h-36 flex items-center justify-center">
+                    <Card className="relative mb-4 p-4 lg:w-96 lg:h-40 md:w-96 md:h-40 sm:w-40 sm:h-36 flex items-center justify-center">
                       <BorderBeam
                         size={80}
                         duration={12 * thumbnail.id}

@@ -6,6 +6,7 @@ import WebDev2022 from "@/assets/Certificates/webdev2022.jpg";
 import WebDev2024 from "@/assets/Certificates/webdev2024.jpg";
 import masteryouremotion from "@/assets/masteryouremotion.png";
 import romero from "@/assets/Testimonial/adam.jpg";
+import jabuoiea from "@/assets/Testimonial/jabuoiea.png";
 import belle from "@/assets/Testimonial/profile.jpg";
 import OnePage from "@/components/one-page";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -74,6 +75,10 @@ const testimonials = [
   {
     src: romero,
     desc: "I’m honestly so happy with my website! Darwin didn’t just meet my expectations. He listened to every idea I had and somehow made them even better. The whole process felt super easy because he kept me in the loop and was always quick to respond. I’m beyond thrilled with how everything turned out. It’s exactly what I wanted, and working with him was such a great experience!",
+  },
+  {
+    src: jabuoiea,
+    desc: "Darwin did a wonderful job and has always been a great help with my website. He is very professional and considerate. He doesn't only listens to my requests but he also brings them to life and exceeds my expectations. He always thinks outside of the box yet he finds better approach to effectively deliver what I envisioned. I would love to work with him again: I really love and recommend his work. Great job! <3",
   },
 ];
 
@@ -164,7 +169,7 @@ export function About() {
             <h2 className="text-2xl mt-16 text-center mb-2 font-chivo">
               Testimonial
             </h2>
-            <div className="flex flex-row items-center justify-center font-chivo mb-8">
+            <div className="grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 justify-center justify-self-center gap-4 my-8 ml-0 2xl:ml-4 xl:ml-4 font-chivo">
               {testimonials.map((testimonial, index) => (
                 <Card
                   className="bg-[#ECE8E1] w-full max-w-[600px] mx-auto"

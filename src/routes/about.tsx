@@ -219,7 +219,7 @@ export function About() {
                           className="flex 2xl:hidden xl:hidden lg:hidden md:hidden sm:hidden"
                           onClick={() => setOpen((prev) => !prev)}
                         >
-                          Show Dialog
+                          {testimonial.name}
                         </Button>
                       )}
                     </AlertDialogTrigger>

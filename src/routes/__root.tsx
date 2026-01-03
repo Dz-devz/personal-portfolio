@@ -197,6 +197,14 @@ function Root() {
                     <span className="absolute bottom-1 left-0 w-0 h-[2px] transition-all bg-[#57AD5B] group-hover:w-full"></span>
                   </a>
                   <a
+                    href="#posts"
+                    onClick={() => handleScrollTo("posts")}
+                    className="relative group text-center"
+                  >
+                    Posts
+                    <span className="absolute bottom-1 left-0 w-0 h-[2px] transition-all bg-[#57AD5B] group-hover:w-full"></span>
+                  </a>
+                  <a
                     href="#my-songs"
                     onClick={() => handleScrollTo("my-songs")}
                     className="relative group text-center"

@@ -1,7 +1,6 @@
 "use client";
 
 import axios from "axios";
-import OnePage from "@/components/one-page";
 import BlurFade from "@/components/ui/blur-fade";
 import { BorderBeam } from "@/components/ui/border-beam";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
@@ -12,9 +11,8 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { createFileRoute } from "@tanstack/react-router";
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
-import { DefaultContext } from "./__root";
 
 export const Route = createFileRoute("/posts")({
   component: Posts,
@@ -35,7 +33,6 @@ interface Post {
 }
 
 export function Posts() {
-  const isDefault = useContext(DefaultContext);
   const [posts, setPosts] = useState<Post[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -54,10 +51,8 @@ export function Posts() {
     fetchPosts();
   }, []);
 
-  if (!isDefault) return <OnePage />;
-
   return (
-    <>
+    <section id="posts">
       <BlurFade delay={0.25} inView>
         <div className="text-xl sm:text-2xl md:text-3xl text-center font-chivo mb-2 font-bold">
           DevThoughts Posts
@@ -124,6 +119,6 @@ export function Posts() {
             ))}
         </div>
       )}
-    </>
+    </section>
   );
 }

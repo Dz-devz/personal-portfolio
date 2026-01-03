@@ -1,9 +1,12 @@
 {
   "rewrites": [
-    { "source": "/(.*)", "destination": "/" },
     {
       "source": "/api/:path*",
       "destination": "https://devthoughtsnote.vercel.app/api/:path*"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }

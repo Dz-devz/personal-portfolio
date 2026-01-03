@@ -1,11 +1,5 @@
 import atomichabits from "@/assets/atomichabits.png";
-import DockerKub from "@/assets/Certificates/dockerandkubernetes.jpg";
-import GitCert from "@/assets/Certificates/GitCert.jpg";
-import UiUx from "@/assets/Certificates/uiux.jpg";
-import WebDev2022 from "@/assets/Certificates/webdev2022.jpg";
-import WebDev2024 from "@/assets/Certificates/webdev2024.jpg";
 import masteryouremotion from "@/assets/masteryouremotion.png";
-import belle from "@/assets/Testimonial/profile.jpg";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import BlurFade from "@/components/ui/blur-fade";
 import {
@@ -23,60 +17,8 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import IconCloud from "@/components/ui/icon-cloud";
+import { certs, slugs, testimonials } from "@/constants/data";
 import { motion } from "framer-motion";
-
-const slugs = [
-  "typescript",
-  "javascript",
-  "java",
-  "react",
-  "android",
-  "html5",
-  "css3",
-  "nodedotjs",
-  "express",
-  "hono",
-  "framer",
-  "nextdotjs",
-  "prisma",
-  "postgresql",
-  "vercel",
-  "git",
-  "github",
-  "visualstudiocode",
-  "androidstudio",
-  "figma",
-  "bun",
-  "canva",
-  "prisma",
-  "drizzle",
-  "hono",
-  "mysql",
-  "postman",
-  "spring",
-  "tailwindcss",
-  "bootstrap",
-  "sass",
-  "docker",
-];
-
-const testimonials = [
-  {
-    src: belle,
-    desc: "I absolutely love my website! Darwin exceeded my expectations and went above and beyond on the project. He fulfilled all of my requests perfectly. The entire process was smooth, thanks to his excellent communication skills. I’m thrilled with the final result and couldn’t be happier with the experience!",
-    alt: "Belle Profile and Testimonial",
-  },
-];
-
-console.log(DockerKub);
-
-const certs = [
-  { src: DockerKub, alt: "Docker and Kubernetes 2025 Certificate" },
-  { src: WebDev2024, alt: "Web Development 2024 Certificate" },
-  { src: GitCert, alt: "Git Certificate" },
-  { src: WebDev2022, alt: "Web Development 2022 Certificate" },
-  { src: UiUx, alt: "UI/UX Certificate" },
-];
 
 export default function About() {
   return (

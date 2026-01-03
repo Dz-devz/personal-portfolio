@@ -16,14 +16,14 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  // server: {
-  //   proxy: {
-  //     // proxy all requests starting with /api to your Vercel backend
-  //     "/api": {
-  //       target: "https://devthoughtsnote.vercel.app",
-  //       changeOrigin: true,
-  //       rewrite: (path) => path.replace(/^\/api/, "/api"),
-  //     },
-  //   },
-  // },
+  server: {
+    proxy: {
+      // proxy all requests starting with /api to your Vercel backend
+      "/api": {
+        target: "https://devthoughtsnote.vercel.app",
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, "/api"),
+      },
+    },
+  },
 });

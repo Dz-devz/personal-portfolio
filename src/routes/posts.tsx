@@ -42,9 +42,7 @@ export function Posts() {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const res = await axios.get<Post[]>(
-          "https://devthoughtsnote.vercel.app/api/all-posts"
-        );
+        const res = await axios.get<Post[]>("/api/all-posts");
         setPosts(Array.isArray(res.data) ? res.data : []);
       } catch (error) {
         console.error("Failed to fetch posts:", error);

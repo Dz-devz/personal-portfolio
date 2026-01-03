@@ -43,7 +43,7 @@ export function Posts() {
     const fetchPosts = async () => {
       try {
         const res = await axios.get<Post[]>("/api/all-posts");
-        setPosts(res.data);
+        setPosts(Array.isArray(res.data) ? res.data : []);
       } catch (error) {
         console.error("Failed to fetch posts:", error);
       } finally {

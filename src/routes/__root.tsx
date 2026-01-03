@@ -81,7 +81,9 @@ function Root() {
                 variants={pageVariants}
               >
                 <div
-                  className={`w-6 h-0.5 mb-1 bg-black transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""}`}
+                  className={`w-6 h-0.5 mb-1 bg-black transition-all duration-300 ${
+                    menuOpen ? "rotate-45 translate-y-2" : ""
+                  }`}
                 ></div>
               </motion.div>
               <motion.div
@@ -90,7 +92,9 @@ function Root() {
                 variants={pageVariants}
               >
                 <div
-                  className={`w-6 h-0.5 bg-black transition-all duration-300 ${menuOpen ? "opacity-0" : "mb-1"}`}
+                  className={`w-6 h-0.5 bg-black transition-all duration-300 ${
+                    menuOpen ? "opacity-0" : "mb-1"
+                  }`}
                 ></div>
               </motion.div>
               <motion.div
@@ -99,7 +103,9 @@ function Root() {
                 variants={pageVariants}
               >
                 <div
-                  className={`w-6 h-0.5 bg-black transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`}
+                  className={`w-6 h-0.5 bg-black transition-all duration-300 ${
+                    menuOpen ? "-rotate-45 -translate-y-2" : ""
+                  }`}
                 ></div>
               </motion.div>
             </div>
@@ -137,6 +143,14 @@ function Root() {
                     onClick={handleLinkClick}
                   >
                     Projects
+                    <span className="absolute bottom-1 left-0 w-0 h-[2px] transition-all bg-[#57AD5B] group-hover:w-full tablet-hide"></span>
+                  </Link>
+                  <Link
+                    to="/posts"
+                    className="relative group text-center [&.active]:font-bold"
+                    onClick={handleLinkClick}
+                  >
+                    Posts
                     <span className="absolute bottom-1 left-0 w-0 h-[2px] transition-all bg-[#57AD5B] group-hover:w-full tablet-hide"></span>
                   </Link>
                   <Link

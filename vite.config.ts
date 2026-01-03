@@ -1,8 +1,8 @@
 // vite.config.ts
-import { defineConfig } from 'vite'
+import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import { TanStackRouterVite } from '@tanstack/router-plugin/vite'
-import path from 'path';
+import { TanStackRouterVite } from "@tanstack/router-plugin/vite";
+import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -16,4 +16,14 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-})
+  server: {
+    proxy: {
+      // proxy all requests starting with /api to your Vercel backend
+      "/api": {
+        target: "https://devthoughtsnote.vercel.app",
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, "/api"),
+      },
+    },
+  },
+});

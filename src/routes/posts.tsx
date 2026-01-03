@@ -5,15 +5,8 @@ import OnePage from "@/components/one-page";
 import BlurFade from "@/components/ui/blur-fade";
 import { BorderBeam } from "@/components/ui/border-beam";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
 import { createFileRoute } from "@tanstack/react-router";
 import { useContext, useEffect, useState } from "react";
-import { createPortal } from "react-dom";
 import { DefaultContext } from "./__root";
 
 export const Route = createFileRoute("/posts")({
@@ -86,40 +79,29 @@ export function Posts() {
             .filter((post) => post.visibility === "public")
             .map((post, idx) => (
               <BlurFade key={post.id} delay={1 + idx * 0.5} inView>
-                <TooltipProvider>
+                <a
+                  href={`https://devthoughtsnote.vercel.app/posts/${post.id}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Card className="relative mb-4 p-4 lg:w-96 lg:h-40 md:w-96 md:h-40 sm:w-40 sm:h-36 flex items-center justify-center">
                     <BorderBeam
                       size={80}
                       colorFrom="#000000"
                       colorTo="#57AD5B"
                     />
-                    <Tooltip>
-                      <TooltipTrigger>
-                        <div className="relative font-chivo cursor-pointer">
-                          <div className="flex flex-col">
-                            <CardTitle className="text-xl md:text-2xl lg:text-3xl text-[#57AD5B]">
-                              {post.title}
-                            </CardTitle>
-                            <CardDescription className="text-muted-foreground text-sm md:text-base lg:text-lg">
-                              {post.description}
-                            </CardDescription>
-                          </div>
-                        </div>
-                      </TooltipTrigger>
-                      {post.thumbnail &&
-                        createPortal(
-                          <TooltipContent className="z-[9999]">
-                            <img
-                              src={post.thumbnail}
-                              alt="Thumbnail"
-                              className="w-[500px] h-[350px] rounded shadow-lg"
-                            />
-                          </TooltipContent>,
-                          document.body
-                        )}
-                    </Tooltip>
+                    <div className="relative font-chivo cursor-pointer">
+                      <div className="flex flex-col">
+                        <CardTitle className="text-xl md:text-2xl lg:text-3xl text-[#57AD5B]">
+                          {post.title}
+                        </CardTitle>
+                        <CardDescription className="text-muted-foreground text-sm md:text-base lg:text-lg">
+                          {post.description}
+                        </CardDescription>
+                      </div>
+                    </div>
                   </Card>
-                </TooltipProvider>
+                </a>
               </BlurFade>
             ))}
         </div>

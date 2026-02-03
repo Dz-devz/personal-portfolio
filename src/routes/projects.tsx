@@ -242,23 +242,18 @@ export default function Projects() {
     <>
       {isDefault ? (
         <>
-          <BlurFade delay={0.25} inView>
-            <div className="text-2xl text-center font-chivo mb-2 font-bold">
-              Projects
-            </div>
-          </BlurFade>
           <BlurFade delay={0.5} inView>
             <div className="text-4xl text-center font-chivo mb-2 font-bold text-[#57AD5B]">
-              Apps I’ve Crafted
+              Apps I’ve Crafted For Client
             </div>
           </BlurFade>
           <div className="mx-auto max-w-screen-xl flex-col lg:flex-row flex-wrap px-4 py-8 lg:px-12 xl:justify-normal lg:justify-center flex gap-4">
             {thumbnails
-              .filter((thumbnail) => thumbnail.category === "Personal")
+              .filter((thumbnail) => thumbnail.category === "Client")
               .map((thumbnail, idx) => (
                 <BlurFade key={thumbnail.id} delay={1 + idx * 0.5} inView>
                   <TooltipProvider>
-                    <Card className="relative mb-4 p-4 lg:w-96 lg:h-40 md:w-96 md:h-40 sm:w-40 sm:h-36 flex items-center justify-center">
+                    <Card className="relative mb-4 p-4 lg:w-96 lg:h-36 md:w-96 md:h-36 sm:w-40 sm:h-36 flex items-center justify-center">
                       <BorderBeam
                         size={80}
                         duration={12 * thumbnail.id}
@@ -328,18 +323,23 @@ export default function Projects() {
                 </BlurFade>
               ))}
           </div>
+          <BlurFade delay={0.25} inView>
+            <div className="text-2xl text-center font-chivo mb-2 font-bold">
+              Projects
+            </div>
+          </BlurFade>
           <BlurFade delay={0.5} inView>
             <div className="text-4xl text-center font-chivo mb-2 font-bold text-[#57AD5B]">
-              Apps I’ve Crafted For Client
+              Apps I’ve Crafted
             </div>
           </BlurFade>
           <div className="mx-auto max-w-screen-xl flex-col lg:flex-row flex-wrap px-4 py-8 lg:px-12 xl:justify-normal lg:justify-center flex gap-4">
             {thumbnails
-              .filter((thumbnail) => thumbnail.category === "Client")
+              .filter((thumbnail) => thumbnail.category === "Personal")
               .map((thumbnail, idx) => (
                 <BlurFade key={thumbnail.id} delay={1 + idx * 0.5} inView>
                   <TooltipProvider>
-                    <Card className="relative mb-4 p-4 lg:w-96 lg:h-36 md:w-96 md:h-36 sm:w-40 sm:h-36 flex items-center justify-center">
+                    <Card className="relative mb-4 p-4 lg:w-96 lg:h-40 md:w-96 md:h-40 sm:w-40 sm:h-36 flex items-center justify-center">
                       <BorderBeam
                         size={80}
                         duration={12 * thumbnail.id}

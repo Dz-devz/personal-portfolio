@@ -1,4 +1,5 @@
 import belleWebsite from "@/assets/bellewebsite.gif";
+import berukeycapsThumbnail from "@/assets/berukeycapsThumbnail.gif";
 import devthoughtsgif from "@/assets/devthoughtsgif.gif";
 import drizzlekit from "@/assets/drizzlekit.png";
 import dztaskthumbnail from "@/assets/dztaskthumbnail.gif";
@@ -203,6 +204,20 @@ const thumbnails = [
   },
   {
     id: 11,
+    title: "Berukeycaps Webstore",
+    desc: "Keycaps Webstore",
+    thumbnail: berukeycapsThumbnail,
+    link: "https://berukeycaps-webstore.vercel.app/",
+    tools: {
+      javascript: javascript,
+      typescript: typescript,
+      reactjs: nextjs,
+      tailwind: tailwind,
+    },
+    category: "Client",
+  },
+  {
+    id: 12,
     title: "Jabuoiea Portfolio",
     desc: "Portfolio Website",
     thumbnail: jabuoieathumbnail,

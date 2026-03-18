@@ -35,7 +35,6 @@ export function About() {
     <>
       {isDefault ? (
         <div className="px-4 sm:px-6 md:px-8">
-          {/* Header */}
           <BlurFade delay={0.25} inView>
             <div className="text-center text-2xl font-bold font-chivo">
               <span>About Me</span>
@@ -48,7 +47,6 @@ export function About() {
             </div>
           </BlurFade>
 
-          {/* Quote */}
           <div className="relative flex items-center justify-center font-chivo mt-16 mb-8">
             <motion.div
               initial={{ opacity: 0 }}
@@ -62,7 +60,6 @@ export function About() {
             </motion.div>
           </div>
 
-          {/* Experience */}
           <BlurFade delay={1} inView>
             <div className="w-full max-w-[800px] mx-auto mt-14">
               <p className="text-xs font-medium tracking-widest uppercase text-neutral-400 mb-8 font-chivo">
@@ -76,7 +73,6 @@ export function About() {
                   >
                     <span className="absolute -left-[1.125rem] sm:-left-[1.625rem] top-6 w-2 h-2 rounded-full bg-neutral-300 border-2 border-white" />
 
-                    {/* Title row — stacks on mobile */}
                     <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-4 mb-1">
                       <div>
                         <p className="font-chivo font-medium text-[15px] text-black">
@@ -125,7 +121,6 @@ export function About() {
             </div>
           </BlurFade>
 
-          {/* Testimonials — single unified layout, grid on md+ */}
           <BlurFade delay={1.2} inView>
             <h2 className="text-2xl mt-16 text-center mb-6 font-chivo">
               Testimonials
@@ -154,7 +149,6 @@ export function About() {
             </div>
           </BlurFade>
 
-          {/* Certificates */}
           <BlurFade delay={1.4} inView>
             <div className="text-2xl font-bold mb-8 text-center font-chivo mt-14">
               Certificates
@@ -182,7 +176,6 @@ export function About() {
             </Carousel>
           </BlurFade>
 
-          {/* Books */}
           <BlurFade delay={1} inView>
             <div className="w-full max-w-[500px] mx-auto mt-14">
               <Card className="bg-[#ECE8E1]">

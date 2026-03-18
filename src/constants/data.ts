@@ -277,3 +277,58 @@ export const thumbnails = [
     category: "Client",
   },
 ];
+
+export const experiences = [
+  {
+    title: "Software Engineer",
+    company: "Freelance",
+    period: "Jan 2025 — Present",
+    badge: "Freelance",
+    badgeStyle: "bg-amber-100 text-amber-800",
+    bullets: [
+      "Built full-featured webstore and React dashboards with REST APIs for analytics and content tracking.",
+      "Delivered 4 SEO-optimized websites, achieving a 98% client satisfaction rate and repeat business.",
+      "Implemented product variants, dynamic pricing, and streamlined purchase flows for a small business webstore.",
+    ],
+    tags: ["React", "REST APIs", "SEO", "E-commerce"],
+  },
+  {
+    title: "Software Engineer",
+    company: "Suzy Rent (Dormy) — Remote · Startup",
+    period: "Mar 2025 — Dec 2025",
+    badge: "Contractual",
+    badgeStyle: "bg-blue-100 text-blue-800",
+    bullets: [
+      "Built and maintained cross-platform mobile and web apps including host/tenant systems, payments, and a rich chat with markdown, templates, attachments, and quick replies.",
+      "Integrated Didit eKYC and Xendit payments for subscriptions and tenant verification workflows.",
+      "Developed type-safe APIs with tRPC, TypeScript, and Zod; collaborated on scalable architecture and folder structure.",
+      "Owned feature development and maintenance for live mobile apps on the App Store and Play Store.",
+    ],
+    tags: ["tRPC", "TypeScript", "Zod", "React Native", "Xendit", "eKYC"],
+  },
+  {
+    title: "Software Engineer",
+    company: "IT Resources (ITRC) — Makati City, PH",
+    period: "Apr 2024 — Dec 2024",
+    badge: "Full-time",
+    badgeStyle: "bg-green-100 text-green-800",
+    bullets: [
+      "Maintained and optimized 6 mobile apps, improving overall stability and performance.",
+      "Refined API architecture and automated environment toggling to enhance developer efficiency.",
+      "Integrated signature and photo capture features, reducing manual processing time by 50%.",
+    ],
+    tags: ["Mobile", "API Design", "Performance"],
+  },
+  {
+    title: "Software Engineer",
+    company: "Dianoia Tech — Remote · Startup",
+    period: "Jan 2024 — Apr 2024",
+    badge: "Part-time",
+    badgeStyle: "bg-blue-100 text-blue-800",
+    bullets: [
+      "Developed an interactive front-end with Next.js, increasing user engagement by 30%.",
+      "Focused on accessibility and UI best practices within an Agile/Scrum team.",
+    ],
+    tags: ["Next.js", "Accessibility", "Agile"],
+  },
+];

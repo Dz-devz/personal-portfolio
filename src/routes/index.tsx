@@ -7,6 +7,8 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
+const INTRO_STORAGE_KEY = "hasSeenIntro";
+
 const waterDropVariants = {
   drop: {
     scale: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
@@ -20,36 +22,40 @@ const waterDropVariants = {
 };
 
 function Index() {
+  // Check localStorage immediately to determine initial state
+  const hasSeenIntro =
+    typeof window !== "undefined" &&
+    localStorage.getItem(INTRO_STORAGE_KEY) === "true";
+
   const [isVisible, setIsVisible] = useState(false);
   const [isVisibleTwo, setIsVisibleTwo] = useState(false);
   const [isVisibleWave, setIsVisibleWave] = useState(false);
-  const [isBentoShow, setBentoShow] = useState(false);
-  const [isNotVisible, setNotVisible] = useState(true);
+  const [isBentoShow, setBentoShow] = useState(hasSeenIntro); // skip straight to home if seen
+  const [isNotVisible, setNotVisible] = useState(!hasSeenIntro); // hide intro if seen
 
   useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      setIsVisible(true);
-    }, 1000);
-    setTimeout(() => {
-      setIsVisible(false);
-    }, 2000);
-    setTimeout(() => {
-      setIsVisibleTwo(true);
-    }, 3000);
-    setTimeout(() => {
-      setIsVisibleTwo(false);
-    }, 5000);
-    setTimeout(() => {
-      setIsVisibleWave(true);
-    }, 6000);
-    setTimeout(() => {
-      setNotVisible(false);
-    }, 7000);
-    setTimeout(() => {
-      setBentoShow(true);
-    }, 7000);
+    // If user has already seen the intro skip the animation
+    if (hasSeenIntro) return;
 
-    return () => clearTimeout(timeoutId);
+    const timeouts: ReturnType<typeof setTimeout>[] = [];
+
+    timeouts.push(
+      setTimeout(() => setIsVisible(true), 1000),
+      setTimeout(() => setIsVisible(false), 2000),
+      setTimeout(() => setIsVisibleTwo(true), 3000),
+      setTimeout(() => setIsVisibleTwo(false), 5000),
+      setTimeout(() => setIsVisibleWave(true), 6000),
+      setTimeout(() => {
+        setNotVisible(false);
+      }, 7000),
+      setTimeout(() => {
+        setBentoShow(true);
+        // Mark intro as seen in localStorage so it wont play anymore
+        localStorage.setItem(INTRO_STORAGE_KEY, "true");
+      }, 7000)
+    );
+
+    return () => timeouts.forEach(clearTimeout);
   }, []);
 
   const pageVariants = {

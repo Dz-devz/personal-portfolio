@@ -1,22 +1,19 @@
-import romero from "@/assets/Testimonial/adam.jpg";
-import jabuoiea from "@/assets/Testimonial/jabuoiea.png";
-import belle from "@/assets/Testimonial/profile.jpg";
+import belleWebsite from "@/assets/bellewebsite.gif";
+import berukeycapsThumbnail from "@/assets/berukeycapsThumbnail.gif";
 import DockerKub from "@/assets/Certificates/dockerandkubernetes.jpg";
 import GitCert from "@/assets/Certificates/GitCert.jpg";
 import UiUx from "@/assets/Certificates/uiux.jpg";
 import WebDev2022 from "@/assets/Certificates/webdev2022.jpg";
 import WebDev2024 from "@/assets/Certificates/webdev2024.jpg";
-import belleWebsite from "@/assets/bellewebsite.gif";
-import berukeycapsThumbnail from "@/assets/berukeycapsThumbnail.gif";
 import devthoughtsgif from "@/assets/devthoughtsgif.gif";
 import drizzlekit from "@/assets/drizzlekit.png";
 import dztaskthumbnail from "@/assets/dztaskthumbnail.gif";
-import express from "@/assets/express.png";
 import expo from "@/assets/expo.png";
+import express from "@/assets/express.png";
+import fieldservice from "@/assets/fieldservice.gif";
 import honojs from "@/assets/honojs.png";
 import invoiceprogif from "@/assets/invoiceprothumbnail.gif";
 import jabuoieathumbnail from "@/assets/jabuoieathumbnail.gif";
-import fieldservice from "@/assets/fieldservice.gif";
 import javascript from "@/assets/javascript.png";
 import nextjs from "@/assets/nextjs.png";
 import nodejs from "@/assets/nodejs.png";
@@ -24,12 +21,16 @@ import paymongoapithumbnail from "@/assets/paymongoapithumbnail.gif";
 import paymongologo from "@/assets/paymongologo.png";
 import paymongothumbnail from "@/assets/paymongothumbnail.gif";
 import postgresql from "@/assets/postgresql.png";
-import dzdevthumbnail from "@/assets/portfoliothumbnail.gif";
 import prisma from "@/assets/prisma.png";
 import reactjs from "@/assets/reactjs.png";
 import swagger from "@/assets/swagger.png";
 import tailwind from "@/assets/tailwind.png";
 import taskapigif from "@/assets/taskapigif.gif";
+import romero from "@/assets/Testimonial/adam.jpg";
+import jabuoiea from "@/assets/Testimonial/jabuoiea.png";
+import belle from "@/assets/Testimonial/profile.jpg";
+import tolstich from "@/assets/Testimonial/tolstich.png";
+import tolstichThumbnail from "@/assets/tolstichstudioThumbnail.gif";
 import tracknstock from "@/assets/tracknstock.gif";
 import typescript from "@/assets/typescript.png";
 
@@ -52,6 +53,12 @@ export const testimonials = [
     src: jabuoiea,
     fallback: "NS",
     desc: "Darwin did a wonderful job and has always been a great help with my website. He is very professional and considerate. He doesn't only listens to my requests but he also brings them to life and exceeds my expectations. He always thinks outside of the box yet he finds better approach to effectively deliver what I envisioned. I would love to work with him again: I really love and recommend his work. Great job! <3",
+  },
+  {
+    name: "Chris",
+    src: tolstich,
+    fallback: "CT",
+    desc: "I was impressed by how quickly Darwin worked while maintaining a high level of quality. Even though he had to build the website in a language that was not familiar to him, everything was implemented cleanly and without noticeable errors. His ideas for the website were well thought out, and his explanations were clear and easy to understand. Communication remained smooth throughout the process, even though we were not working in our native language. I would definitely work with him again on future projects.",
   },
 ];
 
@@ -276,6 +283,20 @@ export const thumbnails = [
     },
     category: "Client",
   },
+  {
+    id: 13,
+    title: "Tolstich Studio",
+    desc: "Business Website",
+    thumbnail: tolstichThumbnail,
+    link: "https://tolstichstudio.vercel.app/",
+    tools: {
+      javascript: javascript,
+      typescript: typescript,
+      reactjs: nextjs,
+      tailwind: tailwind,
+    },
+    category: "Client",
+  },
 ];
 
 export const experiences = [
@@ -285,11 +306,6 @@ export const experiences = [
     period: "Jan 2025 — Present",
     badge: "Freelance",
     badgeStyle: "bg-amber-100 text-amber-800",
-    bullets: [
-      "Built full-featured webstore and React dashboards with REST APIs for analytics and content tracking.",
-      "Delivered 4 SEO-optimized websites, achieving a 98% client satisfaction rate and repeat business.",
-      "Implemented product variants, dynamic pricing, and streamlined purchase flows for a small business webstore.",
-    ],
     tags: ["React", "REST APIs", "SEO", "E-commerce"],
   },
   {
@@ -298,12 +314,6 @@ export const experiences = [
     period: "Mar 2025 — Dec 2025",
     badge: "Contractual",
     badgeStyle: "bg-blue-100 text-blue-800",
-    bullets: [
-      "Built and maintained cross-platform mobile and web apps including host/tenant systems, payments, and a rich chat with markdown, templates, attachments, and quick replies.",
-      "Integrated Didit eKYC and Xendit payments for subscriptions and tenant verification workflows.",
-      "Developed type-safe APIs with tRPC, TypeScript, and Zod; collaborated on scalable architecture and folder structure.",
-      "Owned feature development and maintenance for live mobile apps on the App Store and Play Store.",
-    ],
     tags: ["tRPC", "TypeScript", "Zod", "React Native", "Xendit", "eKYC"],
   },
   {
@@ -312,11 +322,6 @@ export const experiences = [
     period: "Apr 2024 — Dec 2024",
     badge: "Full-time",
     badgeStyle: "bg-green-100 text-green-800",
-    bullets: [
-      "Maintained and optimized 6 mobile apps, improving overall stability and performance.",
-      "Refined API architecture and automated environment toggling to enhance developer efficiency.",
-      "Integrated signature and photo capture features, reducing manual processing time by 50%.",
-    ],
     tags: ["Mobile", "API Design", "Performance"],
   },
   {
@@ -325,10 +330,6 @@ export const experiences = [
     period: "Jan 2024 — Apr 2024",
     badge: "Part-time",
     badgeStyle: "bg-blue-100 text-blue-800",
-    bullets: [
-      "Developed an interactive front-end with Next.js, increasing user engagement by 30%.",
-      "Focused on accessibility and UI best practices within an Agile/Scrum team.",
-    ],
     tags: ["Next.js", "Accessibility", "Agile"],
   },
 ];

@@ -81,18 +81,6 @@ export default function About() {
                     {exp.period}
                   </p>
 
-                  <ul className="flex flex-col gap-1.5">
-                    {exp.bullets.map((b, j) => (
-                      <li
-                        key={j}
-                        className="text-[13px] text-neutral-600 leading-relaxed pl-4 relative"
-                      >
-                        <span className="absolute left-0 top-[9px] w-1 h-1 rounded-full bg-neutral-300" />
-                        {b}
-                      </li>
-                    ))}
-                  </ul>
-
                   <div className="flex flex-wrap gap-1.5 mt-4 pt-4 border-t border-neutral-100">
                     {exp.tags.map((tag) => (
                       <span

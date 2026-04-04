@@ -18,11 +18,11 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { certs, experiences, testimonials } from "@/constants/data";
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { useContext } from "react";
 import { DefaultContext } from "./__root";
-import { certs, experiences, testimonials } from "@/constants/data";
 
 export const Route = createFileRoute("/about")({
   component: About,
@@ -92,18 +92,6 @@ export function About() {
                     <p className="text-xs text-neutral-400 mb-3 font-chivo">
                       {exp.period}
                     </p>
-
-                    <ul className="flex flex-col gap-1.5">
-                      {exp.bullets.map((b, j) => (
-                        <li
-                          key={j}
-                          className="text-[13px] text-neutral-600 leading-relaxed pl-4 relative"
-                        >
-                          <span className="absolute left-0 top-[9px] w-1 h-1 rounded-full bg-neutral-300" />
-                          {b}
-                        </li>
-                      ))}
-                    </ul>
 
                     <div className="flex flex-wrap gap-1.5 mt-4 pt-4 border-t border-neutral-100">
                       {exp.tags.map((tag) => (

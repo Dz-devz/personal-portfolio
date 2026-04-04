@@ -8,12 +8,12 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { thumbnails } from "@/constants/data";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useContext } from "react";
 import { createPortal } from "react-dom";
 import { FaGithub, FaLink } from "react-icons/fa";
 import { DefaultContext } from "./__root";
-import { thumbnails } from "@/constants/data";
 
 export const Route = createFileRoute("/projects")({
   component: Projects,
@@ -62,13 +62,15 @@ export default function Projects() {
                                   {thumbnail.title}
                                 </CardTitle>
                                 <div className="flex flex-row gap-2">
-                                  <Link
-                                    to={thumbnail.github}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                  >
-                                    <FaGithub />
-                                  </Link>
+                                  {thumbnail.github && (
+                                    <Link
+                                      to={thumbnail.github}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                    >
+                                      <FaGithub />
+                                    </Link>
+                                  )}
                                   <Link
                                     to={thumbnail.link}
                                     rel="noopener noreferrer"
@@ -88,7 +90,7 @@ export default function Projects() {
                                         alt={`${toolName} icon`}
                                         className="w-6 h-6"
                                       />
-                                    )
+                                    ),
                                   )}
                                 </div>
                               </div>
@@ -103,7 +105,7 @@ export default function Projects() {
                               className="w-[500px] h-[350px] rounded shadow-lg"
                             />
                           </TooltipContent>,
-                          document.body
+                          document.body,
                         )}
                       </Tooltip>
                     </Card>
@@ -143,13 +145,15 @@ export default function Projects() {
                                   {thumbnail.title}
                                 </CardTitle>
                                 <div className="flex flex-row gap-2">
-                                  <Link
-                                    to={thumbnail.github}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                  >
-                                    <FaGithub />
-                                  </Link>
+                                  {thumbnail.github && (
+                                    <Link
+                                      to={thumbnail.github}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                    >
+                                      <FaGithub />
+                                    </Link>
+                                  )}
                                   <Link
                                     to={thumbnail.link}
                                     rel="noopener noreferrer"
@@ -169,7 +173,7 @@ export default function Projects() {
                                         alt={`${toolName} icon`}
                                         className="w-6 h-6"
                                       />
-                                    )
+                                    ),
                                   )}
                                 </div>
                               </div>
@@ -188,7 +192,7 @@ export default function Projects() {
                               }`}
                             />
                           </TooltipContent>,
-                          document.body
+                          document.body,
                         )}
                       </Tooltip>
                     </Card>
@@ -254,7 +258,7 @@ export default function Projects() {
                                         alt={`${toolName} icon`}
                                         className="w-6 h-6"
                                       />
-                                    )
+                                    ),
                                   )}
                                 </div>
                               </div>
@@ -269,7 +273,7 @@ export default function Projects() {
                               className="w-[500px] h-[350px] rounded shadow-lg"
                             />
                           </TooltipContent>,
-                          document.body
+                          document.body,
                         )}
                       </Tooltip>
                     </Card>

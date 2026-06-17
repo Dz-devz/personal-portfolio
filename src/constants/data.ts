@@ -9,6 +9,7 @@ import devthoughtsgif from "@/assets/devthoughtsgif.gif";
 import drizzlekit from "@/assets/drizzlekit.png";
 import dztaskthumbnail from "@/assets/dztaskthumbnail.gif";
 import expo from "@/assets/expo.png";
+import paithumbnail from "@/assets/paithumbnail.gif";
 import express from "@/assets/express.png";
 import fieldservice from "@/assets/fieldservice.gif";
 import honojs from "@/assets/honojs.png";
@@ -204,6 +205,20 @@ export const thumbnails = [
       swagger: swagger,
     },
     category: "Personal",
+  },
+  {
+    id: 20,
+    title: "pAI π",
+    desc: "Personal AI Files Assistant (Offline) - Live on Google Play Store",
+    thumbnail: paithumbnail,
+    link: "https://play.google.com/store/apps/details?id=com.dz.dev.personalai",
+    github: "",
+    tools: {
+      javascript: javascript,
+      typescript: typescript,
+      reactjs: reactjs,
+    },
+    category: "Mobile App",
   },
   {
     id: 7,

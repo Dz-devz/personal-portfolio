@@ -47,7 +47,7 @@ export default function Projects() {
                         rel="noopener noreferrer"
                       >
                         <div className="relative font-chivo">
-                          <div className="flex flex-col items-start">
+                          <div className="flex flex-col items-start gap-1">
                             <CardTitle className="text-xl md:text-2xl lg:text-3xl text-[#57AD5B]">
                               {thumbnail.title}
                             </CardTitle>
@@ -130,7 +130,7 @@ export default function Projects() {
                         rel="noopener noreferrer"
                       >
                         <div className="relative font-chivo">
-                          <div className="flex flex-col items-start">
+                          <div className="flex flex-col items-start gap-1">
                             <CardTitle className="text-xl md:text-2xl lg:text-3xl text-[#57AD5B]">
                               {thumbnail.title}
                             </CardTitle>
@@ -215,7 +215,7 @@ export default function Projects() {
                         rel="noopener noreferrer"
                       >
                         <div className="relative font-chivo">
-                          <div className="flex flex-col items-start">
+                          <div className="flex flex-col items-start gap-1">
                             <CardTitle className="text-xl md:text-2xl lg:text-3xl text-[#57AD5B]">
                               {thumbnail.title}
                             </CardTitle>

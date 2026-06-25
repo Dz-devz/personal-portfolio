@@ -10,6 +10,7 @@ import drizzlekit from "@/assets/drizzlekit.png";
 import dztaskthumbnail from "@/assets/dztaskthumbnail.gif";
 import expo from "@/assets/expo.png";
 import paithumbnail from "@/assets/paithumbnail.gif";
+import exhibitthumbnail from "@/assets/exhibit-thumbnail.gif";
 import express from "@/assets/express.png";
 import fieldservice from "@/assets/fieldservice.gif";
 import honojs from "@/assets/honojs.png";
@@ -34,6 +35,7 @@ import tolstich from "@/assets/Testimonial/tolstich.png";
 import tolstichThumbnail from "@/assets/tolstichstudioThumbnail.gif";
 import tracknstock from "@/assets/tracknstock.gif";
 import typescript from "@/assets/typescript.png";
+import supabaselogo from "@/assets/supabase.png";
 
 export const testimonials = [
   {
@@ -212,7 +214,6 @@ export const thumbnails = [
     desc: "Personal AI Files Assistant (Offline) - Live on Google Play Store",
     thumbnail: paithumbnail,
     link: "https://play.google.com/store/apps/details?id=com.dz.dev.personalai",
-    github: "",
     tools: {
       javascript: javascript,
       typescript: typescript,
@@ -225,7 +226,6 @@ export const thumbnails = [
     title: "Task App",
     desc: "React Native Expo Task App",
     thumbnail: dztaskthumbnail,
-    link: "",
     github: "https://github.com/Dz-devz/dz-task-expo",
     tools: {
       javascript: javascript,
@@ -243,8 +243,6 @@ export const thumbnails = [
     title: "Field Service",
     desc: "Field Service Mobile App",
     thumbnail: fieldservice,
-    link: "",
-    github: "",
     tools: {
       javascript: javascript,
       typescript: typescript,
@@ -279,7 +277,7 @@ export const thumbnails = [
     tools: {
       javascript: javascript,
       typescript: typescript,
-      reactjs: nextjs,
+      nextjs: nextjs,
       tailwind: tailwind,
     },
     category: "Client",
@@ -293,7 +291,7 @@ export const thumbnails = [
     tools: {
       javascript: javascript,
       typescript: typescript,
-      reactjs: nextjs,
+      nextjs: nextjs,
       tailwind: tailwind,
     },
     category: "Client",
@@ -307,10 +305,37 @@ export const thumbnails = [
     tools: {
       javascript: javascript,
       typescript: typescript,
-      reactjs: nextjs,
+      nextjs: nextjs,
       tailwind: tailwind,
     },
     category: "Client",
+  },
+  {
+    id: 30,
+    title: "pAI π",
+    desc: "Personal AI Web Page",
+    thumbnail: paithumbnail,
+    link: "https://personal-ai-pai.vercel.app/",
+    tools: {
+      javascript: javascript,
+      typescript: typescript,
+      reactjs: reactjs,
+    },
+    category: "Personal",
+  },
+  {
+    id: 31,
+    title: "Exhibit You",
+    desc: "Exhibiting your personal art or your love ones",
+    thumbnail: exhibitthumbnail,
+    link: "https://exhibityou.vercel.app/",
+    tools: {
+      javascript: javascript,
+      typescript: typescript,
+      supabase: supabaselogo,
+      reactjs: reactjs,
+    },
+    category: "Personal",
   },
 ];
 

@@ -348,6 +348,7 @@ export const experiences = [
     badgeStyle: "bg-amber-100 text-amber-800",
     tags: [
       "React",
+      "Next.js",
       "React Native",
       "Expo",
       "TypeScript",

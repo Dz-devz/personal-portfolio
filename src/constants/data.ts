@@ -346,7 +346,14 @@ export const experiences = [
     period: "Jan 2025 — Present",
     badge: "Freelance",
     badgeStyle: "bg-amber-100 text-amber-800",
-    tags: ["React", "REST APIs", "SEO", "E-commerce"],
+    tags: [
+      "React",
+      "React Native",
+      "Expo",
+      "TypeScript",
+      "REST APIs",
+      "AI Integration",
+    ],
   },
   {
     title: "Software Engineer",
@@ -354,7 +361,15 @@ export const experiences = [
     period: "Mar 2025 — Dec 2025",
     badge: "Contractual",
     badgeStyle: "bg-blue-100 text-blue-800",
-    tags: ["tRPC", "TypeScript", "Zod", "React Native", "Xendit", "eKYC"],
+    tags: [
+      "tRPC",
+      "TypeScript",
+      "Zod",
+      "React Native",
+      "Next.js",
+      "Xendit",
+      "eKYC",
+    ],
   },
   {
     title: "Software Engineer",
